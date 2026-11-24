@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="vi" data-preview-bg="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZCL Hub — Bảng Duyệt Bộ Logo &amp; Icon 5 Ứng Dụng</title>
+  <link rel="icon" href="../assets/logos/zcl-hub.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --page-bg: #09080c;
+      --page-subtle: #110f17;
+      --card-bg: #171420;
+      --card-raised: #201b2c;
+      --border: #292437;
+      --border-bright: #3f3754;
+      --text: #f7f3ec;
+      --text-muted: #a097ac;
+      --text-dim: #948c9f;
+      --mint: #85edca;
+      --lilac: #cea3f3;
+      --pink: #fdaab3;
+      --blue: #70b8ff;
+      --cream: #f5ece0;
+      --font-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      --font-mono: "Cascadia Mono", Consolas, "SF Mono", monospace;
+    }
+
+    html[data-preview-bg="light"] {
+      --page-bg: #FBF6EC;
+      --page-subtle: #F3EBDC;
+      --card-bg: #FFFDF8;
+      --card-raised: #F3EBDC;
+      --border: #E2D6C2;
+      --border-bright: #8C7B62;
+      --text: #2A251E;
+      --text-muted: #665B4D;
+      --text-dim: #6d6153;
+    }
+
+    html[data-preview-bg="neutral"] {
+      --page-bg: #2a2a32;
+      --page-subtle: #222229;
+      --card-bg: #32323b;
+      --card-raised: #3b3b46;
+      --border: #484856;
+      --border-bright: #67677a;
+      --text: #f5f5f7;
+      --text-muted: #c2c2cc;
+      --text-dim: #a4a4b2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--page-bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      padding-bottom: 72px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Sticky Toolbar */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: color-mix(in srgb, var(--page-bg) 88%, transparent);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      margin-bottom: 32px;
+    }
+
+    .toolbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .toolbar-brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .toolbar-title h1 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .toolbar-title p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .toolbar-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .segmented {
+      display: inline-flex;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 3px;
+      gap: 3px;
+    }
+
+    .seg-btn,
+    .toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 12px;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .seg-btn:hover,
+    .toggle-btn:hover {
+      color: var(--text);
+      background: var(--card-raised);
+    }
+
+    .seg-btn.active {
+      background: var(--card-raised);
+      color: var(--text);
+      border-color: var(--border-bright);
+    }
+
+    .toggle-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 13px;
+    }
+
+    .toggle-btn.active {
+      border-color: #85edca;
+      color: #85edca;
+      background: rgba(133, 237, 202, 0.12);
+    }
+
+    html[data-preview-bg="light"] .toggle-btn.active {
+      border-color: #0B5E47;
+      color: #0B5E47;
+      background: rgba(11, 94, 71, 0.1);
+    }
+
+    /* Section Headings */
+    .section {
+      margin-bottom: 44px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-head h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .section-head span {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    /* Logo Wrapper with Optional Silhouette & Safe-Zone Overlay */
+    .logo-frame {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    body.silhouette-mode .logo-frame img,
+    body.silhouette-mode .taskbar-icon img,
+    body.silhouette-mode .favicon-img,
+    body.silhouette-mode .mask-box img,
+    body.silhouette-mode .scale-item img {
+      filter: grayscale(1) contrast(1.08);
+    }
+
+    .safe-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.18s ease;
+    }
+
+    body.show-safezone .safe-overlay {
+      opacity: 1;
+    }
+
+    .logo-hairline {
+      border-radius: 21%;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+    }
+
+    html[data-preview-bg="light"] .logo-hairline {
+      box-shadow: 0 6px 18px rgba(42, 37, 30, 0.12), 0 0 0 1px rgba(42, 37, 30, 0.08);
+    }
+
+    /* Overview 5-Up Hero Row */
+    .lineup-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 980px) {
+      .lineup-grid {
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      }
+    }
+
+    .lineup-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 14px;
+    }
+
+    .lineup-logo {
+      width: 150px;
+      height: 150px;
+    }
+
+    .lineup-meta h3 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .lineup-role {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .accent-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border-bright);
+      background: var(--card-raised);
+      margin-top: 6px;
+    }
+
+    .accent-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    /* Simulation Grid: Taskbar, Browser Tabs, PWA Mask */
+    .sim-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 16px;
+    }
+
+    .sim-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .sim-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .sim-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: -8px;
+    }
+
+    /* Windows 11 Taskbar Mockup */
+    .taskbar-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 12px;
+    }
+
+    .taskbar-bar.dark-tb {
+      background: #14141b;
+      border: 1px solid #2b2b38;
+    }
+
+    .taskbar-bar.light-tb {
+      background: #eef1f6;
+      border: 1px solid #d5dbe5;
+    }
+
+    .taskbar-label {
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      margin-right: 6px;
+    }
+
+    .taskbar-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      position: relative;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .taskbar-bar.light-tb .taskbar-icon {
+      background: rgba(0, 0, 0, 0.04);
+    }
+
+    .taskbar-icon.is-active::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      width: 14px;
+      height: 3px;
+      border-radius: 99px;
+      background: #85edca;
+    }
+
+    .taskbar-bar.light-tb .taskbar-icon.is-active::after {
+      background: #0B5E47;
+    }
+
+    .taskbar-icon.sz24 img { width: 24px; height: 24px; border-radius: 5px; }
+    .taskbar-icon.sz32 img { width: 32px; height: 32px; border-radius: 7px; }
+
+    /* Browser Tabs / Favicon 16px Mockup */
+    .tabstrip {
+      display: flex;
+      gap: 4px;
+      padding: 8px 8px 0;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+
+    .tabstrip.dark-tabstrip {
+      background: #100f15;
+      border: 1px solid #292437;
+    }
+
+    .tabstrip.light-tabstrip {
+      background: #e9e2d4;
+      border: 1px solid #d5cab6;
+    }
+
+    .browser-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 8px;
+      border-radius: 8px 8px 0 0;
+      font-size: 0.72rem;
+      font-weight: 500;
+      white-space: nowrap;
+      flex: 1 1 0;
+      min-width: 0;
+      justify-content: center;
+    }
+
+    .dark-tabstrip .browser-tab {
+      background: #1c1826;
+      color: #f7f3ec;
+    }
+
+    .light-tabstrip .browser-tab {
+      background: #FFFDF8;
+      color: #2A251E;
+    }
+
+    .favicon-img {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    /* Maskable Cutout Grid */
+    .mask-row {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .mask-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .mask-box {
+      width: 54px;
+      height: 54px;
+      overflow: hidden;
+      background: #09080c;
+      border: 1px solid var(--border-bright);
+    }
+
+    .mask-box.squircle { border-radius: 22%; }
+    .mask-box.circle { border-radius: 50%; }
+    .mask-box.rounded { border-radius: 10px; }
+
+    .mask-box img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Detailed Cards per Application */
+    .detail-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .detail-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 330px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .detail-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .dual-stage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .stage-box {
+      border-radius: 14px;
+      padding: 18px 12px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+    }
+
+    .stage-box.stage-dark {
+      background: #09080c;
+      color: #a097ac;
+      border: 1px solid #292437;
+    }
+
+    .stage-box.stage-light {
+      background: #FBF6EC;
+      color: #665B4D;
+      border: 1px solid #E2D6C2;
+    }
+
+    .stage-box .logo-frame {
+      width: 118px;
+      height: 118px;
+    }
+
+    .stage-box.stage-dark .logo-frame img {
+      border-radius: 21%;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+    }
+
+    .stage-box.stage-light .logo-frame img {
+      border-radius: 21%;
+      box-shadow: 0 6px 16px rgba(42, 37, 30, 0.14);
+    }
+
+    .detail-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .detail-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .detail-header h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .detail-file-tag {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      background: var(--card-raised);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 7px;
+    }
+
+    .detail-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Size Ladder */
+    .sub-block-title {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .scale-strip {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      flex-wrap: wrap;
+      background: var(--page-subtle);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .scale-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .scale-item img {
+      display: block;
+      border-radius: 21%;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Bottom Row: UI Line Icons + Swatches */
+    .detail-bottom-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .line-icon-panel,
+    .swatch-panel {
+      background: var(--page-subtle);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    .line-icon-chips {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .icon-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border-radius: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+    }
+
+    .icon-chip.dark-chip {
+      background: #171420;
+      border: 1px solid #292437;
+    }
+
+    .icon-chip.light-chip {
+      background: #FFFDF8;
+      border: 1px solid #E2D6C2;
+    }
+
+    .swatch-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .swatch-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 8px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+    }
+
+    .swatch-box {
+      width: 12px;
+      height: 12px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="toolbar">
+    <div class="container toolbar-inner">
+      <div class="toolbar-brand">
+        <img src="../assets/logos/zcl-hub.svg" alt="ZCL Hub Logo">
+        <div class="toolbar-title">
+          <h1>Bảng duyệt Bộ Logo &amp; Icon 5 Ứng Dụng ZCL</h1>
+          <p>So sánh tỷ lệ, màu Dark/Light, kích thước 16px–128px và khung cắt PWA trước khi đưa lên web</p>
+        </div>
+      </div>
+
+      <div class="toolbar-controls">
+        <div class="segmented" role="group" aria-label="Chọn màu nền xem thử">
+          <button type="button" class="seg-btn active" data-bg="dark">Nền Tối (#09080c)</button>
+          <button type="button" class="seg-btn" data-bg="light">Nền Sáng (#FBF6EC)</button>
+          <button type="button" class="seg-btn" data-bg="neutral">Nền Xám (#2a2a32)</button>
+        </div>
+
+        <button type="button" class="toggle-btn" id="btnSafeZone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+          <span>Lưới Safe-Zone 80%</span>
+        </button>
+
+        <button type="button" class="toggle-btn" id="btnSilhouette">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/></svg>
+          <span>Kiểm tra Đen Trắng</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- SECTION 1: TOAN CANH 5 LOGO -->
+    <section class="section">
+      <div class="section-head">
+        <h2>1. Toàn cảnh bộ 5 ứng dụng ZCL</h2>
+        <span>Giữ chung khung squircle #09080c, nét thân kem #f5ece0 dày ~54px và 2 vạch sóng Wi-Fi góc trên phải</span>
+      </div>
+
+      <div class="lineup-grid">
+        <article class="lineup-card">
+          <div class="logo-frame lineup-logo">
+            <img class="logo-hairline" src="../assets/logos/zcl-hub.svg" alt="ZCL Hub">
+            <svg class="safe-overlay" viewBox="0 0 1024 1024">
+              <rect x="140" y="140" width="744" height="744" fill="none" stroke="#85edca" stroke-width="6" stroke-dasharray="16 12"/>
+              <circle cx="512" cy="512" r="409.6" fill="none" stroke="#fdaab3" stroke-width="6" stroke-dasharray="16 12"/>
+            </svg>
+          </div>
+          <div class="lineup-meta">
+            <h3>ZCL Hub</h3>
+            <p class="lineup-role">Cổng hội tụ 4 ứng dụng</p>
+            <span class="accent-pill"><span class="accent-dot" style="background: #f5ece0;"></span>Đa sắc ZCL</span>
+          </div>
+        </article>
+
+        <article class="lineup-card">
+          <div class="logo-frame lineup-logo">
+            <img class="logo-hairline" src="../assets/logos/zcl-teleport.svg" alt="ZCL Teleport">
+            <svg class="safe-overlay" viewBox="0 0 1024 1024">
+              <rect x="140" y="140" width="744" height="744" fill="none" stroke="#85edca" stroke-width="6" stroke-dasharray="16 12"/>
+              <circle cx="512" cy="512" r="409.6" fill="none" stroke="#fdaab3" stroke-width="6" stroke-dasharray="16 12"/>
+            </svg>
+          </div>
+          <div class="lineup-meta">
+            <h3>ZCL Teleport</h3>
+            <p class="lineup-role">Gửi file &amp; khay nhớ tạm</p>
+            <span class="accent-pill"><span class="accent-dot" style="background: #85edca;"></span>Mint #85edca</span>
+          </div>
+        </article>
+
+        <article class="lineup-card">
+          <div class="logo-frame lineup-logo">
+            <img class="logo-hairline" src="../assets/logos/zcl-remote.svg" alt="ZCL Remote">
+            <svg class="safe-overlay" viewBox="0 0 1024 1024">
+              <rect x="140" y="140" width="744" height="744" fill="none" stroke="#85edca" stroke-width="6" stroke-dasharray="16 12"/>
+              <circle cx="512" cy="512" r="409.6" fill="none" stroke="#fdaab3" stroke-width="6" stroke-dasharray="16 12"/>
+            </svg>
+          </div>
+          <div class="lineup-meta">
+            <h3>ZCL Remote</h3>
+            <p class="lineup-role">Điều khiển từ xa 60 FPS</p>
+            <span class="accent-pill"><span class="accent-dot" style="background: #cea3f3;"></span>Lilac #cea3f3</span>
+          </div>
+        </article>
+
+        <article class="lineup-card">
+          <div class="logo-frame lineup-logo">
+            <img class="logo-hairline" src="../assets/logos/zcl-mind.svg" alt="ZCL Mind">
+            <svg class="safe-overlay" viewBox="0 0 1024 1024">
+              <rect x="140" y="140" width="744" height="744" fill="none" stroke="#85edca" stroke-width="6" stroke-dasharray="16 12"/>
+              <circle cx="512" cy="512" r="409.6" fill="none" stroke="#fdaab3" stroke-width="6" stroke-dasharray="16 12"/>
+            </svg>
+          </div>
+          <div class="lineup-meta">
+            <h3>ZCL Mind</h3>
+            <p class="lineup-role">Trợ lý thấu hiểu 6 chiều</p>
+            <span class="accent-pill"><span class="accent-dot" style="background: #fdaab3;"></span>Pink #fdaab3</span>
+          </div>
+        </article>
+
+        <article class="lineup-card">
+          <div class="logo-frame lineup-logo">
+            <img class="logo-hairline" src="../assets/logos/zcl-study.svg" alt="ZCL Study">
+            <svg class="safe-overlay" viewBox="0 0 1024 1024">
+              <rect x="140" y="140" width="744" height="744" fill="none" stroke="#85edca" stroke-width="6" stroke-dasharray="16 12"/>
+              <circle cx="512" cy="512" r="409.6" fill="none" stroke="#fdaab3" stroke-width="6" stroke-dasharray="16 12"/>
+            </svg>
+          </div>
+          <div class="lineup-meta">
+            <h3>ZCL Study</h3>
+            <p class="lineup-role">Ứng dụng học tập ZCL</p>
+            <span class="accent-pill"><span class="accent-dot" style="background: #70b8ff;"></span>Sky Blue #70b8ff</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Simulations: Taskbar, Favicon, Maskable -->
+      <div class="sim-grid">
+        <div class="sim-card">
+          <h3>Mô phỏng Taskbar Windows 11 (24px &amp; 32px)</h3>
+          <p class="sim-sub">Kiểm tra khả năng phân biệt 5 biểu tượng khi ghim cạnh nhau ngoài màn hình</p>
+
+          <div class="taskbar-bar dark-tb">
+            <span class="taskbar-label">24px</span>
+            <span class="taskbar-icon sz24 is-active" title="ZCL Hub"><img src="../assets/logos/zcl-hub.svg" alt="Hub"></span>
+            <span class="taskbar-icon sz24" title="ZCL Teleport"><img src="../assets/logos/zcl-teleport.svg" alt="Teleport"></span>
+            <span class="taskbar-icon sz24" title="ZCL Remote"><img src="../assets/logos/zcl-remote.svg" alt="Remote"></span>
+            <span class="taskbar-icon sz24" title="ZCL Mind"><img src="../assets/logos/zcl-mind.svg" alt="Mind"></span>
+            <span class="taskbar-icon sz24" title="ZCL Study"><img src="../assets/logos/zcl-study.svg" alt="Study"></span>
+          </div>
+
+          <div class="taskbar-bar light-tb">
+            <span class="taskbar-label">32px</span>
+            <span class="taskbar-icon sz32 is-active" title="ZCL Hub"><img src="../assets/logos/zcl-hub.svg" alt="Hub"></span>
+            <span class="taskbar-icon sz32" title="ZCL Teleport"><img src="../assets/logos/zcl-teleport.svg" alt="Teleport"></span>
+            <span class="taskbar-icon sz32" title="ZCL Remote"><img src="../assets/logos/zcl-remote.svg" alt="Remote"></span>
+            <span class="taskbar-icon sz32" title="ZCL Mind"><img src="../assets/logos/zcl-mind.svg" alt="Mind"></span>
+            <span class="taskbar-icon sz32" title="ZCL Study"><img src="../assets/logos/zcl-study.svg" alt="Study"></span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <h3>Mô phỏng Tab trình duyệt / Favicon (16px)</h3>
+          <p class="sim-sub">Kích thước nhỏ nhất ngoài thực tế khi mở song song nhiều tab</p>
+
+          <div class="tabstrip dark-tabstrip">
+            <div class="browser-tab"><img class="favicon-img" src="../assets/logos/zcl-hub.svg" alt="">ZCL Hub</div>
+            <div class="browser-tab"><img class="favicon-img" src="../assets/logos/zcl-teleport.svg" alt="">Teleport</div>
+            <div class="browser-tab"><img class="favicon-img" src="../assets/logos/zcl-remote.svg" alt="">Remote</div>
+            <div class="browser-tab"><img class="favicon-img" src="../assets/logos/zcl-mind.svg" alt="">Mind</div>
+            <div class="browser-tab"><img class="favicon-img" src="../assets/logos/zcl-study.svg" alt="">Study</div>
+          </div>
+
+          <div class="tabstrip light-tabstrip">
+            <div class="browser-tab"><img class="favicon-img" src="../assets/logos/zcl-hub.svg" alt="">ZCL Hub</div>
+            <div class="browser-tab"><img class="favicon-img" src="../assets/logos/zcl-teleport.svg" alt="">Teleport</div>
+            <div class="browser-tab"><img class="favicon-img" src="../assets/logos/zcl-remote.svg" alt="">Remote</div>
+            <div class="browser-tab"><img class="favicon-img" src="../assets/logos/zcl-mind.svg" alt="">Mind</div>
+            <div class="browser-tab"><img class="favicon-img" src="../assets/logos/zcl-study.svg" alt="">Study</div>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <h3>Mô phỏng khung cắt PWA (Maskable)</h3>
+          <p class="sim-sub">Kiểm tra chi tiết tai và vạch sóng khi hệ điều hành cắt tròn 50% hoặc bo vuông</p>
+          <div class="mask-row">
+            <div class="mask-col">
+              <div class="mask-box squircle"><img src="../assets/logos/zcl-hub.svg" alt="Hub squircle"></div>
+              <div class="mask-box circle"><img src="../assets/logos/zcl-hub.svg" alt="Hub circle"></div>
+              <span>Hub</span>
+            </div>
+            <div class="mask-col">
+              <div class="mask-box squircle"><img src="../assets/logos/zcl-teleport.svg" alt="Teleport squircle"></div>
+              <div class="mask-box circle"><img src="../assets/logos/zcl-teleport.svg" alt="Teleport circle"></div>
+              <span>Teleport</span>
+            </div>
+            <div class="mask-col">
+              <div class="mask-box squircle"><img src="../assets/logos/zcl-remote.svg" alt="Remote squircle"></div>
+              <div class="mask-box circle"><img src="../assets/logos/zcl-remote.svg" alt="Remote circle"></div>
+              <span>Remote</span>
+            </div>
+            <div class="mask-col">
+              <div class="mask-box squircle"><img src="../assets/logos/zcl-mind.svg" alt="Mind squircle"></div>
+              <div class="mask-box circle"><img src="../assets/logos/zcl-mind.svg" alt="Mind circle"></div>
+              <span>Mind</span>
+            </div>
+            <div class="mask-col">
+              <div class="mask-box squircle"><img src="../assets/logos/zcl-study.svg" alt="Study squircle"></div>
+              <div class="mask-box circle"><img src="../assets/logos/zcl-study.svg" alt="Study circle"></div>
+              <span>Study</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CHI TIET TUNG UNG DUNG -->
+    <section class="section">
+      <div class="section-head">
+        <h2>2. Duyệt chi tiết từng ứng dụng (Logo màu + Icon nét đơn 24px)</h2>
+        <span>Mỗi thẻ đối chiếu nền Tối / Sáng, 6 bậc kích thước và phiên bản icon nét đơn giao diện</span>
+      </div>
+
+      <div class="detail-list">
+        <!-- 1. ZCL HUB -->
+        <article class="detail-card">
+          <div class="dual-stage">
+            <div class="stage-box stage-dark">
+              <div class="logo-frame">
+                <img src="../assets/logos/zcl-hub.svg" alt="ZCL Hub Dark">
+                <svg class="safe-overlay" viewBox="0 0 1024 1024">
+                  <rect x="140" y="140" width="744" height="744" fill="none" stroke="#85edca" stroke-width="8" stroke-dasharray="16 12"/>
+                  <circle cx="512" cy="512" r="409.6" fill="none" stroke="#fdaab3" stroke-width="8" stroke-dasharray="16 12"/>
+                </svg>
+              </div>
+              <span>Dark #09080c</span>
+            </div>
+            <div class="stage-box stage-light">
+              <div class="logo-frame">
+                <img src="../assets/logos/zcl-hub.svg" alt="ZCL Hub Light">
+                <svg class="safe-overlay" viewBox="0 0 1024 1024">
+                  <rect x="140" y="140" width="744" height="744" fill="none" stroke="#0B5E47" stroke-width="8" stroke-dasharray="16 12"/>
+                  <circle cx="512" cy="512" r="409.6" fill="none" stroke="#A1234D" stroke-width="8" stroke-dasharray="16 12"/>
+                </svg>
+              </div>
+              <span>Light #FBF6EC</span>
+            </div>
+          </div>
+
+          <div class="detail-info">
+            <div class="detail-header">
+              <h3>01. ZCL Hub — Trung tâm bộ ứng dụng</h3>
+              <span class="detail-file-tag">assets/logos/zcl-hub.svg · assets/icons/icon-hub.svg</span>
+            </div>
+            <p class="detail-desc">
+              Vòng cổng bo mềm có đôi tai mèo kế thừa trực tiếp từ bản gốc Teleport, mở cổng ở góc trên phải để tỏa 2 vạch sóng Wi-Fi. Bên trong là 4 khối màu đại diện cho Teleport (Mint), Remote (Lilac), Mind (Pink) và Study (Blue) hội tụ về ngôi sao tâm sáng.
+            </p>
+
+            <div>
+              <div class="sub-block-title">Thang kích thước quang học</div>
+              <div class="scale-strip">
+                <div class="scale-item"><img src="../assets/logos/zcl-hub.svg" width="128" height="128" alt=""><span>128px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-hub.svg" width="64" height="64" alt=""><span>64px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-hub.svg" width="48" height="48" alt=""><span>48px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-hub.svg" width="32" height="32" alt=""><span>32px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-hub.svg" width="24" height="24" alt=""><span>24px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-hub.svg" width="16" height="16" alt=""><span>16px</span></div>
+              </div>
+            </div>
+
+            <div class="detail-bottom-row">
+              <div class="line-icon-panel">
+                <div class="sub-block-title">UI Line Icon (24x24 &amp; 40x40)</div>
+                <div class="line-icon-chips">
+                  <div class="icon-chip dark-chip" style="color: #f5ece0;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="5" height="5" rx="1.5"/><rect x="15" y="4" width="5" height="5" rx="1.5"/><rect x="4" y="15" width="5" height="5" rx="1.5"/><rect x="15" y="15" width="5" height="5" rx="1.5"/><circle cx="12" cy="12" r="2"/><line x1="8.8" y1="8.8" x2="10.6" y2="10.6"/><line x1="15.2" y1="8.8" x2="13.4" y2="10.6"/><line x1="8.8" y1="15.2" x2="10.6" y2="13.4"/><line x1="15.2" y1="15.2" x2="13.4" y2="13.4"/></svg>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="5" height="5" rx="1.5"/><rect x="15" y="4" width="5" height="5" rx="1.5"/><rect x="4" y="15" width="5" height="5" rx="1.5"/><rect x="15" y="15" width="5" height="5" rx="1.5"/><circle cx="12" cy="12" r="2"/><line x1="8.8" y1="8.8" x2="10.6" y2="10.6"/><line x1="15.2" y1="8.8" x2="13.4" y2="10.6"/><line x1="8.8" y1="15.2" x2="10.6" y2="13.4"/><line x1="15.2" y1="15.2" x2="13.4" y2="13.4"/></svg>
+                    <span>Dark</span>
+                  </div>
+                  <div class="icon-chip light-chip" style="color: #2A251E;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="5" height="5" rx="1.5"/><rect x="15" y="4" width="5" height="5" rx="1.5"/><rect x="4" y="15" width="5" height="5" rx="1.5"/><rect x="15" y="15" width="5" height="5" rx="1.5"/><circle cx="12" cy="12" r="2"/><line x1="8.8" y1="8.8" x2="10.6" y2="10.6"/><line x1="15.2" y1="8.8" x2="13.4" y2="10.6"/><line x1="8.8" y1="15.2" x2="10.6" y2="13.4"/><line x1="15.2" y1="15.2" x2="13.4" y2="13.4"/></svg>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="5" height="5" rx="1.5"/><rect x="15" y="4" width="5" height="5" rx="1.5"/><rect x="4" y="15" width="5" height="5" rx="1.5"/><rect x="15" y="15" width="5" height="5" rx="1.5"/><circle cx="12" cy="12" r="2"/><line x1="8.8" y1="8.8" x2="10.6" y2="10.6"/><line x1="15.2" y1="8.8" x2="13.4" y2="10.6"/><line x1="8.8" y1="15.2" x2="10.6" y2="13.4"/><line x1="15.2" y1="15.2" x2="13.4" y2="13.4"/></svg>
+                    <span>Light</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-panel">
+                <div class="sub-block-title">Bảng màu dùng trong logo</div>
+                <div class="swatch-list">
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #f5ece0;"></span>#f5ece0</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #85edca;"></span>#85edca</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #cea3f3;"></span>#cea3f3</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #fdaab3;"></span>#fdaab3</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #70b8ff;"></span>#70b8ff</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. ZCL TELEPORT -->
+        <article class="detail-card">
+          <div class="dual-stage">
+            <div class="stage-box stage-dark">
+              <div class="logo-frame">
+                <img src="../assets/logos/zcl-teleport.svg" alt="ZCL Teleport Dark">
+                <svg class="safe-overlay" viewBox="0 0 1024 1024">
+                  <rect x="140" y="140" width="744" height="744" fill="none" stroke="#85edca" stroke-width="8" stroke-dasharray="16 12"/>
+                  <circle cx="512" cy="512" r="409.6" fill="none" stroke="#fdaab3" stroke-width="8" stroke-dasharray="16 12"/>
+                </svg>
+              </div>
+              <span>Dark #09080c</span>
+            </div>
+            <div class="stage-box stage-light">
+              <div class="logo-frame">
+                <img src="../assets/logos/zcl-teleport.svg" alt="ZCL Teleport Light">
+                <svg class="safe-overlay" viewBox="0 0 1024 1024">
+                  <rect x="140" y="140" width="744" height="744" fill="none" stroke="#0B5E47" stroke-width="8" stroke-dasharray="16 12"/>
+                  <circle cx="512" cy="512" r="409.6" fill="none" stroke="#A1234D" stroke-width="8" stroke-dasharray="16 12"/>
+                </svg>
+              </div>
+              <span>Light #FBF6EC</span>
+            </div>
+          </div>
+
+          <div class="detail-info">
+            <div class="detail-header">
+              <h3>02. ZCL Teleport — Truyền file &amp; Khay nhớ tạm (Bản chuẩn hóa)</h3>
+              <span class="detail-file-tag">assets/logos/zcl-teleport.svg · assets/icons/icon-teleport.svg</span>
+            </div>
+            <p class="detail-desc">
+              Chuẩn hóa từ file logo.svg hiện tại: giữ nguyên thân vòng vô cực tai mèo màu kem, mũi tên xuyên tâm tím và 2 vạch sóng Wi-Fi góc trên phải; bỏ thẻ style nội bộ để tránh xung đột CSS và xóa mảnh đa giác thừa 3px ở góc phải.
+            </p>
+
+            <div>
+              <div class="sub-block-title">Thang kích thước quang học</div>
+              <div class="scale-strip">
+                <div class="scale-item"><img src="../assets/logos/zcl-teleport.svg" width="128" height="128" alt=""><span>128px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-teleport.svg" width="64" height="64" alt=""><span>64px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-teleport.svg" width="48" height="48" alt=""><span>48px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-teleport.svg" width="32" height="32" alt=""><span>32px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-teleport.svg" width="24" height="24" alt=""><span>24px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-teleport.svg" width="16" height="16" alt=""><span>16px</span></div>
+              </div>
+            </div>
+
+            <div class="detail-bottom-row">
+              <div class="line-icon-panel">
+                <div class="sub-block-title">UI Line Icon (24x24 &amp; 40x40)</div>
+                <div class="line-icon-chips">
+                  <div class="icon-chip dark-chip" style="color: #85edca;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.6 14.4C8.4 15.6 7.1 16.5 5.5 16.5a3.5 3.5 0 1 1 0-7c2.3 0 3.9 2 6.5 5s4.2 5 6.5 5a3.5 3.5 0 1 0 0-7c-1.6 0-2.9.9-4.1 2.1"/><path d="M12.2 10.8L14.8 8.2"/><path d="M12.3 8.2h2.5v2.5"/></svg>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.6 14.4C8.4 15.6 7.1 16.5 5.5 16.5a3.5 3.5 0 1 1 0-7c2.3 0 3.9 2 6.5 5s4.2 5 6.5 5a3.5 3.5 0 1 0 0-7c-1.6 0-2.9.9-4.1 2.1"/><path d="M12.2 10.8L14.8 8.2"/><path d="M12.3 8.2h2.5v2.5"/></svg>
+                    <span>Dark</span>
+                  </div>
+                  <div class="icon-chip light-chip" style="color: #0B5E47;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.6 14.4C8.4 15.6 7.1 16.5 5.5 16.5a3.5 3.5 0 1 1 0-7c2.3 0 3.9 2 6.5 5s4.2 5 6.5 5a3.5 3.5 0 1 0 0-7c-1.6 0-2.9.9-4.1 2.1"/><path d="M12.2 10.8L14.8 8.2"/><path d="M12.3 8.2h2.5v2.5"/></svg>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.6 14.4C8.4 15.6 7.1 16.5 5.5 16.5a3.5 3.5 0 1 1 0-7c2.3 0 3.9 2 6.5 5s4.2 5 6.5 5a3.5 3.5 0 1 0 0-7c-1.6 0-2.9.9-4.1 2.1"/><path d="M12.2 10.8L14.8 8.2"/><path d="M12.3 8.2h2.5v2.5"/></svg>
+                    <span>Light</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-panel">
+                <div class="sub-block-title">Màu nhấn giao diện (Dark / Light)</div>
+                <div class="swatch-list">
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #85edca;"></span>Dark #85edca</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #0B5E47;"></span>Light #0B5E47</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #cea3f3;"></span>#cea3f3</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #fdaab3;"></span>#fdaab3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. ZCL REMOTE -->
+        <article class="detail-card">
+          <div class="dual-stage">
+            <div class="stage-box stage-dark">
+              <div class="logo-frame">
+                <img src="../assets/logos/zcl-remote.svg" alt="ZCL Remote Dark">
+                <svg class="safe-overlay" viewBox="0 0 1024 1024">
+                  <rect x="140" y="140" width="744" height="744" fill="none" stroke="#85edca" stroke-width="8" stroke-dasharray="16 12"/>
+                  <circle cx="512" cy="512" r="409.6" fill="none" stroke="#fdaab3" stroke-width="8" stroke-dasharray="16 12"/>
+                </svg>
+              </div>
+              <span>Dark #09080c</span>
+            </div>
+            <div class="stage-box stage-light">
+              <div class="logo-frame">
+                <img src="../assets/logos/zcl-remote.svg" alt="ZCL Remote Light">
+                <svg class="safe-overlay" viewBox="0 0 1024 1024">
+                  <rect x="140" y="140" width="744" height="744" fill="none" stroke="#0B5E47" stroke-width="8" stroke-dasharray="16 12"/>
+                  <circle cx="512" cy="512" r="409.6" fill="none" stroke="#A1234D" stroke-width="8" stroke-dasharray="16 12"/>
+                </svg>
+              </div>
+              <span>Light #FBF6EC</span>
+            </div>
+          </div>
+
+          <div class="detail-info">
+            <div class="detail-header">
+              <h3>03. ZCL Remote — Điều khiển máy tính từ xa 60 FPS</h3>
+              <span class="detail-file-tag">assets/logos/zcl-remote.svg · assets/icons/icon-remote.svg</span>
+            </div>
+            <p class="detail-desc">
+              Khung màn hình bo tròn màu kem mở thoáng góc dưới-phải để con trỏ chuột màu tím Lilac lao thẳng vào điểm chạm Mint giữa màn hình kèm 2 vòng gợn sóng phản hồi tức thì không độ trễ. Khối màn hình chữ nhật giúp phân biệt ngay ở 16px.
+            </p>
+
+            <div>
+              <div class="sub-block-title">Thang kích thước quang học</div>
+              <div class="scale-strip">
+                <div class="scale-item"><img src="../assets/logos/zcl-remote.svg" width="128" height="128" alt=""><span>128px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-remote.svg" width="64" height="64" alt=""><span>64px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-remote.svg" width="48" height="48" alt=""><span>48px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-remote.svg" width="32" height="32" alt=""><span>32px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-remote.svg" width="24" height="24" alt=""><span>24px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-remote.svg" width="16" height="16" alt=""><span>16px</span></div>
+              </div>
+            </div>
+
+            <div class="detail-bottom-row">
+              <div class="line-icon-panel">
+                <div class="sub-block-title">UI Line Icon (24x24 &amp; 40x40)</div>
+                <div class="line-icon-chips">
+                  <div class="icon-chip dark-chip" style="color: #cea3f3;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"/><line x1="8" y1="20.5" x2="13.5" y2="20.5"/><path d="M13 11.5l7.5 3.2-3.2 1.4-1.4 3.2L13 11.5z"/><line x1="17.3" y1="16.1" x2="20.5" y2="19.3"/></svg>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"/><line x1="8" y1="20.5" x2="13.5" y2="20.5"/><path d="M13 11.5l7.5 3.2-3.2 1.4-1.4 3.2L13 11.5z"/><line x1="17.3" y1="16.1" x2="20.5" y2="19.3"/></svg>
+                    <span>Dark</span>
+                  </div>
+                  <div class="icon-chip light-chip" style="color: #4B2E91;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"/><line x1="8" y1="20.5" x2="13.5" y2="20.5"/><path d="M13 11.5l7.5 3.2-3.2 1.4-1.4 3.2L13 11.5z"/><line x1="17.3" y1="16.1" x2="20.5" y2="19.3"/></svg>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"/><line x1="8" y1="20.5" x2="13.5" y2="20.5"/><path d="M13 11.5l7.5 3.2-3.2 1.4-1.4 3.2L13 11.5z"/><line x1="17.3" y1="16.1" x2="20.5" y2="19.3"/></svg>
+                    <span>Light</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-panel">
+                <div class="sub-block-title">Màu nhấn giao diện (Dark / Light)</div>
+                <div class="swatch-list">
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #cea3f3;"></span>Dark #cea3f3</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #4B2E91;"></span>Light #4B2E91</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #85edca;"></span>#85edca</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #fdaab3;"></span>#fdaab3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. ZCL MIND -->
+        <article class="detail-card">
+          <div class="dual-stage">
+            <div class="stage-box stage-dark">
+              <div class="logo-frame">
+                <img src="../assets/logos/zcl-mind.svg" alt="ZCL Mind Dark">
+                <svg class="safe-overlay" viewBox="0 0 1024 1024">
+                  <rect x="140" y="140" width="744" height="744" fill="none" stroke="#85edca" stroke-width="8" stroke-dasharray="16 12"/>
+                  <circle cx="512" cy="512" r="409.6" fill="none" stroke="#fdaab3" stroke-width="8" stroke-dasharray="16 12"/>
+                </svg>
+              </div>
+              <span>Dark #09080c</span>
+            </div>
+            <div class="stage-box stage-light">
+              <div class="logo-frame">
+                <img src="../assets/logos/zcl-mind.svg" alt="ZCL Mind Light">
+                <svg class="safe-overlay" viewBox="0 0 1024 1024">
+                  <rect x="140" y="140" width="744" height="744" fill="none" stroke="#0B5E47" stroke-width="8" stroke-dasharray="16 12"/>
+                  <circle cx="512" cy="512" r="409.6" fill="none" stroke="#A1234D" stroke-width="8" stroke-dasharray="16 12"/>
+                </svg>
+              </div>
+              <span>Light #FBF6EC</span>
+            </div>
+          </div>
+
+          <div class="detail-info">
+            <div class="detail-header">
+              <h3>04. ZCL Mind — Trợ lý thấu hiểu cá nhân 6 chiều</h3>
+              <span class="detail-file-tag">assets/logos/zcl-mind.svg · assets/icons/icon-mind.svg</span>
+            </div>
+            <p class="detail-desc">
+              Hai dải vòng cung kem đối xứng ôm lấy lõi ngôi sao hồng và 6 hạt chiều thấu hiểu cách đều 60 độ (Hồ sơ, Thói quen, Lịch trình, Quan hệ, Tính cách, Điểm mạnh/lưu ý), gợi cảm giác riêng tư lưu hoàn toàn trên máy cá nhân.
+            </p>
+
+            <div>
+              <div class="sub-block-title">Thang kích thước quang học</div>
+              <div class="scale-strip">
+                <div class="scale-item"><img src="../assets/logos/zcl-mind.svg" width="128" height="128" alt=""><span>128px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-mind.svg" width="64" height="64" alt=""><span>64px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-mind.svg" width="48" height="48" alt=""><span>48px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-mind.svg" width="32" height="32" alt=""><span>32px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-mind.svg" width="24" height="24" alt=""><span>24px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-mind.svg" width="16" height="16" alt=""><span>16px</span></div>
+              </div>
+            </div>
+
+            <div class="detail-bottom-row">
+              <div class="line-icon-panel">
+                <div class="sub-block-title">UI Line Icon (24x24 &amp; 40x40)</div>
+                <div class="line-icon-chips">
+                  <div class="icon-chip dark-chip" style="color: #fdaab3;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><circle cx="12" cy="4.2" r="1.4"/><circle cx="18.8" cy="8.1" r="1.4"/><circle cx="18.8" cy="15.9" r="1.4"/><circle cx="12" cy="19.8" r="1.4"/><circle cx="5.2" cy="15.9" r="1.4"/><circle cx="5.2" cy="8.1" r="1.4"/><line x1="12" y1="5.6" x2="12" y2="9.4"/><line x1="17.5" y1="8.8" x2="14.3" y2="10.7"/><line x1="17.5" y1="15.2" x2="14.3" y2="13.3"/><line x1="12" y1="18.4" x2="12" y2="14.6"/><line x1="6.5" y1="15.2" x2="9.7" y2="13.3"/><line x1="6.5" y1="8.8" x2="9.7" y2="10.7"/></svg>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><circle cx="12" cy="4.2" r="1.4"/><circle cx="18.8" cy="8.1" r="1.4"/><circle cx="18.8" cy="15.9" r="1.4"/><circle cx="12" cy="19.8" r="1.4"/><circle cx="5.2" cy="15.9" r="1.4"/><circle cx="5.2" cy="8.1" r="1.4"/><line x1="12" y1="5.6" x2="12" y2="9.4"/><line x1="17.5" y1="8.8" x2="14.3" y2="10.7"/><line x1="17.5" y1="15.2" x2="14.3" y2="13.3"/><line x1="12" y1="18.4" x2="12" y2="14.6"/><line x1="6.5" y1="15.2" x2="9.7" y2="13.3"/><line x1="6.5" y1="8.8" x2="9.7" y2="10.7"/></svg>
+                    <span>Dark</span>
+                  </div>
+                  <div class="icon-chip light-chip" style="color: #A1234D;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><circle cx="12" cy="4.2" r="1.4"/><circle cx="18.8" cy="8.1" r="1.4"/><circle cx="18.8" cy="15.9" r="1.4"/><circle cx="12" cy="19.8" r="1.4"/><circle cx="5.2" cy="15.9" r="1.4"/><circle cx="5.2" cy="8.1" r="1.4"/><line x1="12" y1="5.6" x2="12" y2="9.4"/><line x1="17.5" y1="8.8" x2="14.3" y2="10.7"/><line x1="17.5" y1="15.2" x2="14.3" y2="13.3"/><line x1="12" y1="18.4" x2="12" y2="14.6"/><line x1="6.5" y1="15.2" x2="9.7" y2="13.3"/><line x1="6.5" y1="8.8" x2="9.7" y2="10.7"/></svg>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><circle cx="12" cy="4.2" r="1.4"/><circle cx="18.8" cy="8.1" r="1.4"/><circle cx="18.8" cy="15.9" r="1.4"/><circle cx="12" cy="19.8" r="1.4"/><circle cx="5.2" cy="15.9" r="1.4"/><circle cx="5.2" cy="8.1" r="1.4"/><line x1="12" y1="5.6" x2="12" y2="9.4"/><line x1="17.5" y1="8.8" x2="14.3" y2="10.7"/><line x1="17.5" y1="15.2" x2="14.3" y2="13.3"/><line x1="12" y1="18.4" x2="12" y2="14.6"/><line x1="6.5" y1="15.2" x2="9.7" y2="13.3"/><line x1="6.5" y1="8.8" x2="9.7" y2="10.7"/></svg>
+                    <span>Light</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-panel">
+                <div class="sub-block-title">Màu nhấn giao diện (Dark / Light)</div>
+                <div class="swatch-list">
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #fdaab3;"></span>Dark #fdaab3</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #A1234D;"></span>Light #A1234D</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #85edca;"></span>#85edca</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #cea3f3;"></span>#cea3f3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. ZCL STUDY -->
+        <article class="detail-card">
+          <div class="dual-stage">
+            <div class="stage-box stage-dark">
+              <div class="logo-frame">
+                <img src="../assets/logos/zcl-study.svg" alt="ZCL Study Dark">
+                <svg class="safe-overlay" viewBox="0 0 1024 1024">
+                  <rect x="140" y="140" width="744" height="744" fill="none" stroke="#85edca" stroke-width="8" stroke-dasharray="16 12"/>
+                  <circle cx="512" cy="512" r="409.6" fill="none" stroke="#fdaab3" stroke-width="8" stroke-dasharray="16 12"/>
+                </svg>
+              </div>
+              <span>Dark #09080c</span>
+            </div>
+            <div class="stage-box stage-light">
+              <div class="logo-frame">
+                <img src="../assets/logos/zcl-study.svg" alt="ZCL Study Light">
+                <svg class="safe-overlay" viewBox="0 0 1024 1024">
+                  <rect x="140" y="140" width="744" height="744" fill="none" stroke="#0B5E47" stroke-width="8" stroke-dasharray="16 12"/>
+                  <circle cx="512" cy="512" r="409.6" fill="none" stroke="#A1234D" stroke-width="8" stroke-dasharray="16 12"/>
+                </svg>
+              </div>
+              <span>Light #FBF6EC</span>
+            </div>
+          </div>
+
+          <div class="detail-info">
+            <div class="detail-header">
+              <h3>05. ZCL Study — Ứng dụng học tập ZCL</h3>
+              <span class="detail-file-tag">assets/logos/zcl-study.svg · assets/icons/icon-study.svg</span>
+            </div>
+            <p class="detail-desc">
+              Hai cánh trang sách mở tạo chữ V cân đối với ngôi sao khai sáng Sky Blue rực rỡ phía trên gáy sách. Bố cục trang sách chữ V hoàn toàn khác khối tròn hay chữ nhật của 4 ứng dụng còn lại, dễ mở rộng cho cả học cá nhân và chia sẻ phòng học Wi-Fi.
+            </p>
+
+            <div>
+              <div class="sub-block-title">Thang kích thước quang học</div>
+              <div class="scale-strip">
+                <div class="scale-item"><img src="../assets/logos/zcl-study.svg" width="128" height="128" alt=""><span>128px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-study.svg" width="64" height="64" alt=""><span>64px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-study.svg" width="48" height="48" alt=""><span>48px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-study.svg" width="32" height="32" alt=""><span>32px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-study.svg" width="24" height="24" alt=""><span>24px</span></div>
+                <div class="scale-item"><img src="../assets/logos/zcl-study.svg" width="16" height="16" alt=""><span>16px</span></div>
+              </div>
+            </div>
+
+            <div class="detail-bottom-row">
+              <div class="line-icon-panel">
+                <div class="sub-block-title">UI Line Icon (24x24 &amp; 40x40)</div>
+                <div class="line-icon-chips">
+                  <div class="icon-chip dark-chip" style="color: #70b8ff;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11c-2.1-1.8-5-2.5-8-2.5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1c3 0 5.9.7 8 2.5 2.1-1.8 5-2.5 8-2.5a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1c-3 0-5.9.7-8 2.5z"/><line x1="12" y1="11" x2="12" y2="21"/><path d="M12 2.2l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7z"/></svg>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11c-2.1-1.8-5-2.5-8-2.5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1c3 0 5.9.7 8 2.5 2.1-1.8 5-2.5 8-2.5a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1c-3 0-5.9.7-8 2.5z"/><line x1="12" y1="11" x2="12" y2="21"/><path d="M12 2.2l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7z"/></svg>
+                    <span>Dark</span>
+                  </div>
+                  <div class="icon-chip light-chip" style="color: #135891;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11c-2.1-1.8-5-2.5-8-2.5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1c3 0 5.9.7 8 2.5 2.1-1.8 5-2.5 8-2.5a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1c-3 0-5.9.7-8 2.5z"/><line x1="12" y1="11" x2="12" y2="21"/><path d="M12 2.2l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7z"/></svg>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11c-2.1-1.8-5-2.5-8-2.5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1c3 0 5.9.7 8 2.5 2.1-1.8 5-2.5 8-2.5a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1c-3 0-5.9.7-8 2.5z"/><line x1="12" y1="11" x2="12" y2="21"/><path d="M12 2.2l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7z"/></svg>
+                    <span>Light</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-panel">
+                <div class="sub-block-title">Màu nhấn giao diện (Dark / Light)</div>
+                <div class="swatch-list">
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #70b8ff;"></span>Dark #70b8ff</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #135891;"></span>Light #135891</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #85edca;"></span>#85edca</span>
+                  <span class="swatch-pill"><span class="swatch-box" style="background: #cea3f3;"></span>#cea3f3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const bgBtns = document.querySelectorAll('.seg-btn[data-bg]');
+      const btnSafe = document.getElementById('btnSafeZone');
+      const btnSil = document.getElementById('btnSilhouette');
+
+      function setPreviewBg(bg) {
+        if (!bg || !['dark', 'light', 'neutral'].includes(bg)) return;
+        root.setAttribute('data-preview-bg', bg);
+        bgBtns.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-bg') === bg); });
+      }
+
+      bgBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setPreviewBg(btn.getAttribute('data-bg'));
+        });
+      });
+
+      btnSafe.addEventListener('click', function () {
+        const active = document.body.classList.toggle('show-safezone');
+        btnSafe.classList.toggle('active', active);
+      });
+
+      btnSil.addEventListener('click', function () {
+        const active = document.body.classList.toggle('silhouette-mode');
+        btnSil.classList.toggle('active', active);
+      });
+
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('bg')) setPreviewBg(params.get('bg'));
+      if (params.get('safe') === '1') {
+        document.body.classList.add('show-safezone');
+        btnSafe.classList.add('active');
+      }
+      if (params.get('silhouette') === '1') {
+        document.body.classList.add('silhouette-mode');
+        btnSil.classList.add('active');
+      }
+    })();
+  </script>
+</body>
+</html>

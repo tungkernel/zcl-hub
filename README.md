@@ -52,7 +52,13 @@ Toàn bộ tài liệu chi tiết được lưu trong thư mục [`docs/`](docs/
 ```text
 hub/
 ├── assets/               # Hình ảnh và logo nhận diện ZCL
-│   └── logo.svg
+│   ├── logo.svg          # Logo chính ZCL Hub
+│   ├── logos/            # Bộ 5 Master Logo SVG (Hub, Teleport, Remote, Mind, Study)
+│   ├── icons/            # Bộ 5 UI Line Icon nét đơn (24x24)
+│   ├── pwa/              # Bộ PNG PWA (192px, 512px, maskable, apple-touch-icon)
+│   └── exports/          # Gói xuất Desktop Windows (.ico, PNG 256px, Tray icons)
+├── scripts/              # Công cụ tự động xuất tài nguyên thương hiệu
+│   └── export_brand_assets.py
 ├── docs/                 # Thư mục tài liệu dự án
 │   ├── README.md         # Tổng quan tài liệu
 │   ├── user-guide.md     # Hướng dẫn sử dụng chi tiết

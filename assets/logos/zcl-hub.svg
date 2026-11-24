@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <!-- ZCL Hub Master Logo: Organic Cat-Ear Portal & 4-App Convergence Core -->
+  <path fill="#09080c" d="M167.23,0h688.6s168.18,9.14,168.18,182.24v670.43s-9.99,171.33-182.58,171.33H163.82S0,1001.94,0,844.16V168.78S3.92,19.43,167.23,0Z"/>
+
+  <!-- Top-right ZCL LAN Wi-Fi Waves (Mint outer, Cream inner) -->
+  <path fill="none" stroke="#85edca" stroke-width="20" stroke-linecap="round" d="M764,198 A112,112 0 0 1 872,306"/>
+  <path fill="none" stroke="#f5ece0" stroke-width="20" stroke-linecap="round" d="M764,238 A72,72 0 0 1 832,306"/>
+
+  <!-- Cream Cat-Ear Portal Ring with plush organic curves and top-right gateway opening -->
+  <path fill="none" stroke="#f5ece0" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"
+        d="M694,394
+           C708,342 714,294 708,256
+           C705,238 688,233 676,246
+           C652,271 626,298 602,320
+           C570,302 536,294 500,294
+           C464,294 430,302 398,320
+           C374,298 348,271 324,246
+           C312,233 295,238 292,256
+           C286,294 292,342 306,394
+           C264,438 240,492 240,550
+           C240,694 354,806 500,806
+           C634,806 742,706 756,576
+           C760,542 756,508 746,476"/>
+
+  <!-- Subtle convergence spokes linking the 4 app tiles cleanly to the central star -->
+  <g stroke="#f5ece0" stroke-width="14" stroke-linecap="round" opacity="0.72">
+    <line x1="436" y1="486" x2="478" y2="528"/>
+    <line x1="564" y1="486" x2="522" y2="528"/>
+    <line x1="436" y1="614" x2="478" y2="572"/>
+    <line x1="564" y1="614" x2="522" y2="572"/>
+  </g>
+
+  <!-- 4 App Squircles (2x2): Mint (Teleport), Lilac (Remote), Pink (Mind), Sky Blue (Study) -->
+  <rect fill="#85edca" x="348" y="398" width="92" height="92" rx="28"/>
+  <rect fill="#cea3f3" x="560" y="398" width="92" height="92" rx="28"/>
+  <rect fill="#fdaab3" x="348" y="610" width="92" height="92" rx="28"/>
+  <rect fill="#70b8ff" x="560" y="610" width="92" height="92" rx="28"/>
+
+  <!-- Central Bright Core (Crisp 4-point rounded star with breathing gap around nodes) -->
+  <path fill="#f5ece0" d="M500,502 C507,534 516,543 548,550 C516,557 507,566 500,598 C493,566 484,557 452,550 C484,543 493,534 500,502 Z"/>
+</svg>

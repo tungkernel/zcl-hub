@@ -1,5 +1,5 @@
 // ZCL Hub Service Worker - Offline Ready & Automatic Background Update
-const CACHE_NAME = 'zcl-hub-v39';
+const CACHE_NAME = 'zcl-hub-v40';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -7,7 +7,16 @@ const ASSETS_TO_CACHE = [
   './src/styles.css',
   './src/app.js',
   './manifest.json',
-  './assets/logo.svg'
+  './assets/logo.svg',
+  './assets/logos/zcl-hub.svg',
+  './assets/logos/zcl-teleport.svg',
+  './assets/logos/zcl-remote.svg',
+  './assets/logos/zcl-mind.svg',
+  './assets/logos/zcl-study.svg',
+  './assets/pwa/icon-192.png',
+  './assets/pwa/icon-512.png',
+  './assets/pwa/icon-maskable-512.png',
+  './assets/pwa/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (event) => {

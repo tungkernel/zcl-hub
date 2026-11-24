@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <!-- ZCL Study Master Logo: Soft Open Book Wings + Sky Blue Clarity Spark -->
+  <path fill="#09080c" d="M167.23,0h688.6s168.18,9.14,168.18,182.24v670.43s-9.99,171.33-182.58,171.33H163.82S0,1001.94,0,844.16V168.78S3.92,19.43,167.23,0Z"/>
+
+  <!-- Top-right ZCL LAN Wi-Fi Waves (Sky Blue outer, Cream inner) -->
+  <path fill="none" stroke="#70b8ff" stroke-width="20" stroke-linecap="round" d="M764,198 A112,112 0 0 1 872,306"/>
+  <path fill="none" stroke="#f5ece0" stroke-width="20" stroke-linecap="round" d="M764,238 A72,72 0 0 1 832,306"/>
+
+  <!-- Cream Open Book Silhouette (Balanced symmetrical V-wings + center spine) -->
+  <path fill="none" stroke="#f5ece0" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"
+        d="M500,536
+           C438,448 334,424 236,424
+           C206,424 186,444 186,474
+           L186,690
+           C186,718 206,738 236,738
+           C338,738 432,756 500,796
+           C568,756 662,738 764,738
+           C794,738 814,718 814,690
+           L814,474
+           C814,444 794,424 764,424
+           C666,424 562,448 500,536
+           Z"/>
+  <line x1="500" y1="538" x2="500" y2="792" stroke="#f5ece0" stroke-width="44" stroke-linecap="round"/>
+
+  <!-- Crisp Floating Sky Blue Clarity Star centered cleanly in V-valley above spine -->
+  <path fill="#70b8ff" d="M500,238 C516,304 536,324 602,340 C536,356 516,376 500,442 C484,376 464,356 398,340 C464,324 484,304 500,238 Z"/>
+  <circle fill="#f5ece0" cx="500" cy="340" r="16"/>
+
+  <!-- Study Note Lines & Accent Energy Dots on Left and Right Pages -->
+  <path fill="none" stroke="#70b8ff" stroke-width="22" stroke-linecap="round" d="M276,548 C326,542 374,552 414,572"/>
+  <path fill="none" stroke="#70b8ff" stroke-width="22" stroke-linecap="round" d="M276,632 C326,626 374,636 414,656"/>
+  <path fill="none" stroke="#70b8ff" stroke-width="22" stroke-linecap="round" d="M724,548 C674,542 626,552 586,572"/>
+  <path fill="none" stroke="#70b8ff" stroke-width="22" stroke-linecap="round" d="M724,632 C674,626 626,636 586,656"/>
+
+  <circle fill="#85edca" cx="272" cy="494" r="15"/>
+  <circle fill="#cea3f3" cx="728" cy="494" r="15"/>
+</svg>

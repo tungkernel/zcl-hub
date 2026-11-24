@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <!-- ZCL Remote Master Logo: Soft Monitor Frame + Instant Lilac Cursor & Zero-Latency Ripple -->
+  <path fill="#09080c" d="M167.23,0h688.6s168.18,9.14,168.18,182.24v670.43s-9.99,171.33-182.58,171.33H163.82S0,1001.94,0,844.16V168.78S3.92,19.43,167.23,0Z"/>
+
+  <!-- Top-right ZCL LAN Wi-Fi Waves (Lilac outer, Cream inner) -->
+  <path fill="none" stroke="#cea3f3" stroke-width="20" stroke-linecap="round" d="M764,198 A112,112 0 0 1 872,306"/>
+  <path fill="none" stroke="#f5ece0" stroke-width="20" stroke-linecap="round" d="M764,238 A72,72 0 0 1 832,306"/>
+
+  <!-- Soft Rounded Cream Monitor Frame with intentional bottom-right entry gap for cursor -->
+  <path fill="none" stroke="#f5ece0" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"
+        d="M558,704
+           L254,704
+           C210,704 176,670 176,626
+           L176,396
+           C176,352 210,318 254,318
+           L664,318
+           C708,318 742,352 742,396
+           L742,506"/>
+
+  <!-- Pill Monitor Stand Base -->
+  <line x1="366" y1="792" x2="552" y2="792" stroke="#f5ece0" stroke-width="48" stroke-linecap="round"/>
+
+  <!-- Top-left Screen Status Energy Dots (Mint & Pink) tucked cleanly into corner -->
+  <circle fill="#85edca" cx="254" cy="394" r="15"/>
+  <circle fill="#fdaab3" cx="306" cy="394" r="15"/>
+
+  <!-- Zero-Latency Click Target & Instant Feedback Ripples -->
+  <circle fill="#85edca" cx="468" cy="494" r="18"/>
+  <path fill="none" stroke="#cea3f3" stroke-width="15" stroke-linecap="round" d="M422,526 A56,56 0 1 1 518,468"/>
+  <path fill="none" stroke="#fdaab3" stroke-width="13" stroke-linecap="round" d="M392,550 A94,94 0 1 1 550,446"/>
+
+  <!-- Crisp Rounded-Corner Lilac Cursor Arrow -->
+  <path fill="#cea3f3"
+        d="M500,522
+           C492,519 485,526 488,534
+           L568,754
+           C572,764 585,765 591,756
+           L638,684
+           L730,776
+           C738,784 750,784 758,776
+           L786,748
+           C794,740 794,728 786,720
+           L694,628
+           L766,581
+           C775,575 774,562 764,558
+           Z"/>
+</svg>

@@ -472,9 +472,76 @@ class TestPWAAndAssets(unittest.TestCase):
     def test_service_worker_asset_list(self):
         with open(SW_JS, "r", encoding="utf-8") as f:
             sw = f.read()
-        self.assertIn("zcl-hub-v39", sw, "SW cache version must be updated")
-        for asset in ["./index.html", "./404.html", "./src/styles.css", "./src/app.js", "./manifest.json", "./assets/logo.svg"]:
+        self.assertIn("zcl-hub-v40", sw, "SW cache version must be updated")
+        for asset in [
+            "./index.html",
+            "./404.html",
+            "./src/styles.css",
+            "./src/app.js",
+            "./manifest.json",
+            "./assets/logo.svg",
+            "./assets/logos/zcl-hub.svg",
+            "./assets/logos/zcl-teleport.svg",
+            "./assets/logos/zcl-remote.svg",
+            "./assets/logos/zcl-mind.svg",
+            "./assets/logos/zcl-study.svg",
+            "./assets/pwa/icon-192.png",
+            "./assets/pwa/icon-512.png",
+            "./assets/pwa/icon-maskable-512.png",
+            "./assets/pwa/apple-touch-icon.png",
+        ]:
             self.assertIn(asset, sw, f"Service worker must cache {asset}")
+
+    def test_brand_kit_logos_and_icons_integrity(self):
+        """Verifies all 5 app logos, 5 UI line icons, PWA PNGs, desktop exports, and web integration."""
+        import xml.etree.ElementTree as ET
+
+        emoji_pattern = re.compile(r'[\u2600-\u27BF\U0001F300-\U0001FAFF]')
+        apps = ("hub", "teleport", "remote", "mind", "study")
+
+        for app in apps:
+            logo_path = os.path.join(REPO_ROOT, "assets", "logos", f"zcl-{app}.svg")
+            self.assertTrue(os.path.exists(logo_path), f"Missing master logo: {logo_path}")
+            with open(logo_path, "r", encoding="utf-8") as f:
+                svg_txt = f.read()
+            root = ET.fromstring(svg_txt)
+            self.assertEqual(root.attrib.get("viewBox"), "0 0 1024 1024")
+            self.assertEqual(root.attrib.get("shape-rendering"), "geometricPrecision")
+            self.assertNotIn("<style", svg_txt)
+            self.assertEqual(len(emoji_pattern.findall(svg_txt)), 0)
+
+            icon_path = os.path.join(REPO_ROOT, "assets", "icons", f"icon-{app}.svg")
+            self.assertTrue(os.path.exists(icon_path), f"Missing UI line icon: {icon_path}")
+            with open(icon_path, "r", encoding="utf-8") as f:
+                icon_txt = f.read()
+            icon_root = ET.fromstring(icon_txt)
+            self.assertEqual(icon_root.attrib.get("viewBox"), "0 0 24 24")
+            self.assertEqual(icon_root.attrib.get("stroke"), "currentColor")
+
+            ico_path = os.path.join(REPO_ROOT, "assets", "exports", "ico", f"zcl-{app}.ico")
+            png_path = os.path.join(REPO_ROOT, "assets", "exports", "png", f"zcl-{app}-256.png")
+            tray_light = os.path.join(REPO_ROOT, "assets", "exports", "tray", f"tray-{app}-light.png")
+            tray_dark = os.path.join(REPO_ROOT, "assets", "exports", "tray", f"tray-{app}-dark.png")
+            for asset_path in (ico_path, png_path, tray_light, tray_dark):
+                self.assertTrue(os.path.exists(asset_path) and os.path.getsize(asset_path) > 0, f"Missing/empty export: {asset_path}")
+
+        for pwa_file in ("icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"):
+            pwa_path = os.path.join(REPO_ROOT, "assets", "pwa", pwa_file)
+            self.assertTrue(os.path.exists(pwa_path) and os.path.getsize(pwa_path) > 0, f"Missing/empty PWA asset: {pwa_path}")
+
+        with open(LOGO_SVG, "r", encoding="utf-8") as f_root, open(
+            os.path.join(REPO_ROOT, "assets", "logos", "zcl-hub.svg"), "r", encoding="utf-8"
+        ) as f_hub:
+            self.assertEqual(f_root.read().strip(), f_hub.read().strip(), "assets/logo.svg must match assets/logos/zcl-hub.svg")
+
+        with open(INDEX_HTML, "r", encoding="utf-8") as f:
+            html = f.read()
+        for app_logo in ("assets/logos/zcl-teleport.svg", "assets/logos/zcl-remote.svg", "assets/logos/zcl-mind.svg"):
+            self.assertIn(app_logo, html, f"index.html must reference {app_logo}")
+
+        with open(PAGE_404, "r", encoding="utf-8") as f:
+            page_404 = f.read()
+        self.assertNotIn("M503.47 446.44", page_404, "404.html must use new ZCL Hub logo instead of old Teleport inline path")
 
     def test_light_mode_color_contrast(self):
         """Verifies high contrast text and buttons in light mode (no dark text on dark green/purple buttons)."""

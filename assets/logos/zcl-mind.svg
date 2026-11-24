@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <!-- ZCL Mind Master Logo: Cream Embrace Halo + 6-Dimension Local Core -->
+  <path fill="#09080c" d="M167.23,0h688.6s168.18,9.14,168.18,182.24v670.43s-9.99,171.33-182.58,171.33H163.82S0,1001.94,0,844.16V168.78S3.92,19.43,167.23,0Z"/>
+
+  <!-- Top-right ZCL LAN Wi-Fi Waves (Pink outer, Cream inner) -->
+  <path fill="none" stroke="#fdaab3" stroke-width="20" stroke-linecap="round" d="M764,198 A112,112 0 0 1 872,306"/>
+  <path fill="none" stroke="#f5ece0" stroke-width="20" stroke-linecap="round" d="M764,238 A72,72 0 0 1 832,306"/>
+
+  <!-- Symmetric Cream Embrace Halos (Center 502,544, radius 262) -->
+  <path fill="none" stroke="#f5ece0" stroke-width="52" stroke-linecap="round" d="M380,312 A262,262 0 0 0 380,776"/>
+  <path fill="none" stroke="#f5ece0" stroke-width="52" stroke-linecap="round" d="M624,312 A262,262 0 0 1 624,776"/>
+
+  <!-- 6-Dimension Memory Threads linking outer nodes to central core -->
+  <g stroke="#fdaab3" stroke-width="16" stroke-linecap="round" opacity="0.9">
+    <line x1="502" y1="392" x2="502" y2="696"/>
+    <line x1="370" y1="468" x2="634" y2="620"/>
+    <line x1="634" y1="468" x2="370" y2="620"/>
+  </g>
+
+  <!-- Central Mind Crystal Core (Pink star with bright Cream center) -->
+  <path fill="#fdaab3" d="M502,462 C514,517 529,532 584,544 C529,556 514,571 502,626 C490,571 475,556 420,544 C475,532 490,517 502,462 Z"/>
+  <circle fill="#f5ece0" cx="502" cy="544" r="18"/>
+
+  <!-- 6 Dimension Nodes at 60-degree intervals (r = 160 around 502,544) -->
+  <circle fill="#fdaab3" cx="502" cy="384" r="24"/>
+  <circle fill="#85edca" cx="641" cy="464" r="22"/>
+  <circle fill="#fdaab3" cx="641" cy="624" r="24"/>
+  <circle fill="#fdaab3" cx="502" cy="704" r="24"/>
+  <circle fill="#cea3f3" cx="363" cy="624" r="22"/>
+  <circle fill="#fdaab3" cx="363" cy="464" r="24"/>
+</svg>
