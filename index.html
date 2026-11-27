@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ZCL Hub — Truyền file siêu tốc &amp; Điều khiển máy tính</title>
-  <meta name="description" content="ZCL Hub: Gửi nhận file hàng chục GB trong vài giây và điều khiển máy tính mượt mà qua Wi-Fi chung. Không cần Internet, không cần tạo tài khoản.">
+  <title>ZCL Hub — Bộ công cụ làm việc trực tiếp &amp; hoàn toàn riêng tư</title>
+  <meta name="description" content="ZCL Hub: Bộ công cụ làm việc trực tiếp trên máy tính và mạng nội bộ — truyền file, điều khiển từ xa và trợ lý cá nhân ngoại tuyến. Không đám mây, không tài khoản.">
   <meta name="theme-color" content="#09080c">
   <meta name="color-scheme" content="dark">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/pwa/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="src/styles.css?v=42">
+  <link rel="stylesheet" href="src/styles.css?v=45">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="ZCL Hub — Truyền file siêu tốc &amp; Điều khiển máy tính">
+  <meta property="og:title" content="ZCL Hub — Bộ công cụ làm việc trực tiếp &amp; hoàn toàn riêng tư">
   <meta property="og:description" content="Nhanh hơn. Mượt mà hơn. Hoàn toàn riêng tư qua mạng Wi-Fi chung.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/pwa/icon-512.png">
@@ -134,7 +134,7 @@
           </h1>
 
           <p class="hero-lede" data-i18n="hero_lede">
-            Gửi file hàng chục GB và điều khiển máy tính trực tiếp qua Wi-Fi chung. Không cần Internet, không cần tạo tài khoản.
+            Bộ công cụ làm việc trực tiếp trên máy tính và mạng nội bộ — truyền file, điều khiển từ xa và trợ lý cá nhân hoàn toàn ngoại tuyến. Không đám mây, không tài khoản.
           </p>
 
           <div class="hero-cta">
@@ -150,94 +150,88 @@
         </div>
       </section>
 
-      <!-- 2. Three ZCL Products -->
-      <section class="section overview-products-section">
+      <!-- 2. Visual Story: Detour Across the World vs. Direct Line Across the Room -->
+      <section class="section overview-story-section">
         <div class="container">
-          <div class="section-head">
-            <span class="section-badge" data-i18n="ov_products_badge">CÁC SẢN PHẨM</span>
-            <h2 data-i18n="ov_products_title">Ba công cụ làm việc trực tiếp trên máy</h2>
-            <p data-i18n="ov_products_sub">Chọn ứng dụng phù hợp với nhu cầu của bạn để xem chi tiết và tải về miễn phí.</p>
+          <div class="story-card">
+            <div class="story-copy">
+              <span class="section-badge" data-i18n="ov_story_badge">CÂU CHUYỆN CỦA ZCL HUB</span>
+              <h2 data-i18n="ov_story_title">Đừng gửi dữ liệu đi nửa vòng Trái Đất chỉ để sang chiếc bàn bên cạnh.</h2>
+              <p class="story-lead" data-i18n="ov_story_lead">
+                Hai chiếc máy tính chỉ cách nhau một sải tay. Vậy mà lâu nay, mỗi lần muốn chuyển bộ ảnh gia đình hay đoạn phim kỷ niệm, ta lại phải đẩy lên mạng xa xôi, chờ tải lên, chờ tải về rồi chấp nhận ảnh bị nén mờ.
+              </p>
+              <p class="story-quote" data-i18n="ov_story_quote">
+                &ldquo;Những gì thuộc về căn phòng của bạn, hãy để nó ở lại trong căn phòng của bạn.&rdquo;
+              </p>
+            </div>
+
+            <!-- Minimalist Visual Contrast Diagram -->
+            <div class="story-visual" aria-hidden="true">
+              <!-- Old way: Long detour -->
+              <div class="route-box route-old">
+                <div class="route-label" data-i18n="ov_route_old_label">Cách cũ · Đi đường vòng</div>
+                <div class="route-track">
+                  <div class="route-node">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                    <span data-i18n="ov_node_a">Máy bạn</span>
+                  </div>
+                  <div class="route-detour-line">
+                    <span class="detour-cloud-pill">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                      <span data-i18n="ov_route_old_mid">Máy chủ xa xôi · Chờ đợi · Nén mờ</span>
+                    </span>
+                  </div>
+                  <div class="route-node">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <span data-i18n="ov_node_b">Máy bên cạnh</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ZCL Hub way: Direct line -->
+              <div class="route-box route-direct">
+                <div class="route-label mint" data-i18n="ov_route_new_label">Với ZCL Hub · Đi thẳng trong phòng</div>
+                <div class="route-track">
+                  <div class="route-node mint">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                    <span data-i18n="ov_node_a">Máy bạn</span>
+                  </div>
+                  <div class="route-direct-beam">
+                    <span class="direct-beam-pulse"></span>
+                    <span class="direct-beam-tag" data-i18n="ov_route_new_mid">Thẳng qua Wi-Fi chung · Nguyên bản · Tức thì</span>
+                  </div>
+                  <div class="route-node mint">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <span data-i18n="ov_node_b">Máy bên cạnh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="overview-products-grid">
-            <!-- Teleport -->
-            <article class="overview-product-card mint">
-              <div class="ov-card-head">
-                <div class="app-icon teleport-icon">
-                  <img src="assets/logos/zcl-teleport.svg" alt="ZCL Teleport" class="app-logo-img">
-                </div>
-                <div class="store-badge-group">
-                  <span class="product-pill" data-i18n="tp_status">Bản chính thức</span>
-                  <span class="store-version-tag" id="ovTpVersion">v1.8.0</span>
-                </div>
-              </div>
-              <h3>ZCL Teleport</h3>
-              <p class="ov-card-desc" data-i18n="ov_tp_desc">
-                Gửi file và thư mục dung lượng lớn, đồng bộ khay nhớ tạm hai chiều và gửi ảnh sang điện thoại qua mã QR.
-              </p>
-              <div class="ov-card-meta">
-                <span>Windows · macOS · Linux</span>
-                <span>GPL-3.0</span>
-              </div>
-              <div class="ov-card-actions">
-                <button class="btn btn-primary btn-sm" data-action="open-detail" data-app-target="teleport" type="button">
-                  <span data-i18n="ov_btn_view_download">Xem &amp; Tải về</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </div>
+          <!-- 3 Everyday Moments (Zero technical numbers) -->
+          <div class="section-head" style="margin-top: 56px;">
+            <span class="section-badge" data-i18n="ov_scene_badge">CẢM GIÁC KHÁC BIỆT</span>
+            <h2 data-i18n="ov_scene_title">Ba khoảnh khắc khiến bạn không muốn quay lại cách cũ</h2>
+          </div>
+
+          <div class="scenarios-grid">
+            <article class="scenario-card mint">
+              <span class="scenario-num">01</span>
+              <h3 data-i18n="ov_sc1_title">Gửi trọn chuyến đi chỉ trong chớp mắt</h3>
+              <p data-i18n="ov_sc1_desc">Vừa đi chơi về, cả album ảnh và những đoạn phim kỷ niệm sang máy bên cạnh nguyên vẹn từng chi tiết — không cần tìm dây cáp, không cần cắm USB.</p>
             </article>
 
-            <!-- Remote -->
-            <article class="overview-product-card lilac">
-              <div class="ov-card-head">
-                <div class="app-icon remote-icon">
-                  <img src="assets/logos/zcl-remote.svg" alt="ZCL Remote" class="app-logo-img">
-                </div>
-                <div class="store-badge-group">
-                  <span class="product-pill lilac" data-i18n="rm_status">Bản thử nghiệm</span>
-                  <span class="store-version-tag lilac" id="ovRmVersion">v0.2.0</span>
-                </div>
-              </div>
-              <h3>ZCL Remote</h3>
-              <p class="ov-card-desc" data-i18n="ov_rm_desc">
-                Điều khiển máy tính từ xa mượt mà 60 FPS qua Wi-Fi chung, chuột bấm ăn ngay và có nút dừng khẩn cấp.
-              </p>
-              <div class="ov-card-meta">
-                <span>Windows 10 / 11</span>
-                <span data-i18n="chip_proprietary">Miễn phí</span>
-              </div>
-              <div class="ov-card-actions">
-                <button class="btn btn-lilac btn-sm" data-action="open-detail" data-app-target="remote" type="button">
-                  <span data-i18n="ov_btn_view_download">Xem &amp; Tải về</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </div>
+            <article class="scenario-card lilac">
+              <span class="scenario-num">02</span>
+              <h3 data-i18n="ov_sc2_title">Hai chiếc máy bỗng hòa làm một</h3>
+              <p data-i18n="ov_sc2_desc">Ngồi gọn trên sofa vẫn chạm tay vào màn hình máy bàn bên kia, chép dòng chữ ở máy này là dán ngay sang máy kia, quét mã là điện thoại nhận được liền.</p>
             </article>
 
-            <!-- Mind -->
-            <article class="overview-product-card pink">
-              <div class="ov-card-head">
-                <div class="app-icon mind-icon">
-                  <img src="assets/logos/zcl-mind.svg" alt="ZCL Mind" class="app-logo-img">
-                </div>
-                <div class="store-badge-group">
-                  <span class="product-pill pink" data-i18n="mind_status">Đang phát triển</span>
-                </div>
-              </div>
-              <h3>ZCL Mind</h3>
-              <p class="ov-card-desc" data-i18n="ov_mind_desc">
-                Trợ lý cá nhân chạy 100% bằng CPU trên máy tính, lưu cục bộ thói quen, lịch trình và mối quan hệ hoàn toàn ngoại tuyến.
-              </p>
-              <div class="ov-card-meta">
-                <span>Windows 10 / 11</span>
-                <span data-i18n="chip_coming_soon">Sắp ra mắt</span>
-              </div>
-              <div class="ov-card-actions">
-                <button class="btn btn-secondary btn-sm" data-action="open-detail" data-app-target="mind" type="button">
-                  <span data-i18n="ov_btn_view_detail">Xem chi tiết</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </div>
+            <article class="scenario-card pink">
+              <span class="scenario-num">03</span>
+              <h3 data-i18n="ov_sc3_title">Bình yên làm việc ngay cả khi mất mạng</h3>
+              <p data-i18n="ov_sc3_desc">Ngoài kia có đứt mạng Internet, mọi việc bên trong căn phòng của bạn vẫn chạy êm ru. Mọi tệp tin và ghi nhớ riêng tư luôn nằm gọn trong tay bạn.</p>
             </article>
           </div>
         </div>
@@ -293,7 +287,7 @@
           <div class="section-head">
             <span class="section-badge" data-i18n="store_catalog_badge">ỨNG DỤNG &amp; TẢI VỀ</span>
             <h2 data-i18n="store_catalog_title">Chọn ứng dụng để xem chi tiết hoặc tải ngay</h2>
-            <p data-i18n="store_catalog_sub">Miễn phí hoàn toàn, không cần tài khoản. Các liên kết tải tự động đồng bộ bản phát hành mới nhất từ GitHub.</p>
+            <p data-i18n="store_catalog_sub">Miễn phí hoàn toàn, không cần tài khoản. Chọn ứng dụng để xem chi tiết và tải bản mới nhất.</p>
           </div>
 
           <div class="bento-grid">
@@ -749,10 +743,7 @@
                 <span class="chip-item" data-i18n="chip_author">Tác giả: Nguyễn Hoàng Tùng</span>
               </div>
               <div class="detail-cta-row">
-                <a href="https://github.com/tungkernel/zcl-hub/releases" target="_blank" rel="noopener noreferrer" class="btn btn-pink">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  <span data-i18n="dt_mind_btn_follow">Theo dõi tiến độ trên GitHub</span>
-                </a>
+                <span class="detail-status-pill pink" data-i18n="dt_mind_coming_note">Đang hoàn thiện — sẽ sớm mở tải về tại đây</span>
               </div>
             </div>
           </div>
@@ -937,7 +928,7 @@
                 <svg class="faq-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
               </button>
               <div class="faq-answer" data-i18n="faq_a4">
-                Vì dự án độc lập chưa mua chứng chỉ ký mã thương mại nên hệ điều hành có thể hiện cảnh báo tệp mới. Trên Windows: bấm "More info" rồi chọn "Run anyway" và cho phép mạng riêng tư (Private networks). Trên macOS: chuột phải vào ứng dụng rồi chọn Mở (Open) và cấp quyền Mạng cục bộ. Bạn có thể đối chiếu mã SHA256SUMS.txt kèm mỗi bản phát hành trên GitHub.
+                Vì dự án độc lập chưa mua chứng chỉ ký mã thương mại nên hệ điều hành có thể hiện cảnh báo tệp mới. Trên Windows: bấm "More info" rồi chọn "Run anyway" và cho phép mạng riêng tư (Private networks). Trên macOS: chuột phải vào ứng dụng rồi chọn Mở (Open) và cấp quyền Mạng cục bộ.
               </div>
             </div>
 
@@ -967,7 +958,7 @@
                 <svg class="faq-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
               </button>
               <div class="faq-answer" data-i18n="faq_a7">
-                Bạn có thể ủng hộ quốc tế qua GitHub Sponsors (một lần hoặc hàng tháng) hoặc quét mã VietQR / MoMo trong mục Ủng hộ ở thanh trên cùng. Mọi khoản ủng hộ đều hoàn toàn tự nguyện và không làm thay đổi cam kết miễn phí.
+                Bạn có thể quét mã VietQR hoặc chuyển khoản trong mục Ủng hộ ở thanh trên cùng. Mọi khoản ủng hộ đều hoàn toàn tự nguyện và không làm thay đổi cam kết miễn phí.
               </div>
             </div>
           </div>
@@ -1020,18 +1011,6 @@
           <h5 data-i18n="footer_contact">Tác giả &amp; Liên hệ</h5>
           <ul class="footer-contact-list">
             <li><span class="footer-author-name">Nguyễn Hoàng Tùng</span></li>
-            <li>
-              <a href="https://github.com/sponsors/tungkernel" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                <span>GitHub Sponsors</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/tungkernel" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                <span>GitHub (@tungkernel)</span>
-              </a>
-            </li>
             <li>
               <a href="mailto:hoangtungcnh@gmail.com" class="footer-contact-link">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -1087,13 +1066,6 @@
 
       <div class="modal-tips" id="modalPlatformTip" data-i18n="modal_smartscreen_tip">
         <strong>Mẹo nhỏ:</strong> Nếu Windows hiện cảnh báo tệp mới, bấm <em>"More info"</em> &rarr; chọn <em>"Run anyway"</em>.
-      </div>
-
-      <div class="modal-footer-links">
-        <a href="https://github.com/Nha-Cong-Dong/zero-cloud-lan-teleport/releases/latest" target="_blank" rel="noopener noreferrer" class="modal-github-link" id="modalGithubLink">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          <span data-i18n="dl_view_release">Xem danh sách phát hành trên GitHub</span>
-        </a>
       </div>
     </div>
   </div>
@@ -1189,7 +1161,7 @@
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
             <h3 class="fb-success-title" data-i18n="fb_success_title">Cảm ơn bạn đã gửi đóng góp!</h3>
-            <p class="fb-success-desc" data-i18n="fb_success_desc">Ý kiến của bạn đã được ghi nhận. Bạn cũng có thể gửi nhanh qua Email hoặc mở thảo luận trên GitHub.</p>
+            <p class="fb-success-desc" data-i18n="fb_success_desc">Ý kiến của bạn đã được ghi nhận. Bạn cũng có thể gửi nhanh qua Email hoặc sao chép nội dung bên dưới.</p>
 
             <div class="fb-success-actions">
               <a href="mailto:hoangtungcnh@gmail.com" class="btn btn-secondary btn-sm" id="modalFbBtnMail" target="_blank" rel="noopener noreferrer">
@@ -1198,9 +1170,6 @@
               <button type="button" class="btn btn-secondary btn-sm" id="modalFbBtnCopy">
                 <span data-i18n="fb_btn_copy">Sao chép nội dung</span>
               </button>
-              <a href="https://github.com/tungkernel/zcl-hub/issues" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span data-i18n="fb_btn_github">Mở thảo luận GitHub</span>
-              </a>
               <button type="button" class="btn btn-text btn-sm" id="modalFbBtnAnother">
                 <span data-i18n="fb_btn_another">Gửi thêm ý kiến khác</span>
               </button>
@@ -1208,7 +1177,7 @@
           </div>
         </div>
 
-        <!-- Panel 2: Donate (Adaptive order: GitHub Sponsors first in EN, VietQR first in VI) -->
+        <!-- Panel 2: Donate (Compact layout, no overflow) -->
         <div class="modal-tab-panel" id="modalPanelDonate" role="tabpanel">
           <div class="modal-icon donate-modal-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1216,105 +1185,75 @@
             </svg>
           </div>
           <h3 class="modal-title" id="donateModalTitle" data-i18n="dn_modal_title">Ủng hộ dự án ZCL Hub</h3>
-          <p class="modal-desc" data-i18n="dn_modal_desc">Ủng hộ tự nguyện giúp duy trì các công cụ miễn phí, không quảng cáo và phát triển lâu dài.</p>
+          <p class="modal-desc" data-i18n="dn_modal_desc">Quét mã VietQR để tiếp sức cho dự án ZCL Hub.</p>
 
-          <div class="donate-channels-stack">
-            <!-- GitHub Sponsors Primary Card -->
-            <div class="donate-sponsors-card" id="donateSponsorsBlock">
-              <div class="sponsors-card-copy">
-                <span class="sponsors-card-badge" data-i18n="dn_sponsors_badge">Quốc tế · Thẻ &amp; PayPal</span>
-                <h4 data-i18n="dn_sponsors_title">GitHub Sponsors</h4>
-                <p data-i18n="dn_sponsors_desc">Hỗ trợ ủng hộ một lần hoặc hàng tháng trực tiếp qua GitHub, 0% phí nền tảng.</p>
-              </div>
-              <a href="https://github.com/sponsors/tungkernel" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm donate-sponsors-btn">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                <span data-i18n="dn_sponsors_btn">Ủng hộ trên GitHub</span>
-              </a>
-            </div>
+          <div class="donate-amount-picker modal-amount-picker">
+            <button type="button" class="donate-amount-pill active" data-amount="20000" data-memo="ZCL Hub">
+              <span data-i18n="dn_amount_20k">20.000đ · Ly cà phê</span>
+            </button>
+            <button type="button" class="donate-amount-pill" data-amount="50000" data-memo="ZCL Hub">
+              <span data-i18n="dn_amount_50k">50.000đ · Tiếp sức</span>
+            </button>
+            <button type="button" class="donate-amount-pill" data-amount="100000" data-memo="ZCL Hub">
+              <span data-i18n="dn_amount_100k">100.000đ · Đồng hành</span>
+            </button>
+            <button type="button" class="donate-amount-pill" data-amount="0" data-memo="ZCL Hub">
+              <span data-i18n="dn_amount_custom">Tùy tâm</span>
+            </button>
+          </div>
 
-            <!-- VietQR / Vietnam Local Transfer Block -->
-            <div class="donate-vietqr-block" id="donateVietqrBlock">
-              <div class="vietqr-block-head" data-i18n="dn_vietqr_heading">Chuyển khoản nội địa Việt Nam (VietQR / MoMo)</div>
-
-              <div class="donate-amount-picker modal-amount-picker">
-                <button type="button" class="donate-amount-pill active" data-amount="20000" data-memo="ZCL Hub">
-                  <span data-i18n="dn_amount_20k">20.000đ · Ly cà phê</span>
-                </button>
-                <button type="button" class="donate-amount-pill" data-amount="50000" data-memo="ZCL Hub">
-                  <span data-i18n="dn_amount_50k">50.000đ · Tiếp sức</span>
-                </button>
-                <button type="button" class="donate-amount-pill" data-amount="100000" data-memo="ZCL Hub">
-                  <span data-i18n="dn_amount_100k">100.000đ · Đồng hành</span>
-                </button>
-                <button type="button" class="donate-amount-pill" data-amount="0" data-memo="ZCL Hub">
-                  <span data-i18n="dn_amount_custom">Tùy tâm</span>
-                </button>
-              </div>
-
-              <div class="donate-qr-content-row modal-qr-row">
-                <div class="donate-qr-frame">
-                  <div class="donate-qr-wrapper">
-                    <img id="modalDonateQrImg" src="https://img.vietqr.io/image/MB-0906279876-compact2.png?amount=20000&addInfo=ZCL%20Hub" alt="VietQR MB Bank - ZCL Hub" class="donate-qr-img" loading="lazy">
-                    <div class="donate-qr-corners">
-                      <span class="corner tl"></span>
-                      <span class="corner tr"></span>
-                      <span class="corner bl"></span>
-                      <span class="corner br"></span>
-                    </div>
-                  </div>
-                  <span class="donate-qr-scan-line" aria-hidden="true"></span>
-                  <span class="donate-qr-caption">VietQR · MB Bank</span>
-                </div>
-
-                <div class="donate-info-fields">
-                  <div class="donate-info-item">
-                    <span class="donate-info-label" data-i18n="dn_bank_label">Ngân hàng:</span>
-                    <strong class="donate-info-val" data-i18n="dn_bank_val">MB Bank (Quân Đội)</strong>
-                  </div>
-                  <div class="donate-info-item">
-                    <span class="donate-info-label" data-i18n="dn_acc_num_label">Số tài khoản:</span>
-                    <div class="donate-copy-row">
-                      <strong class="donate-info-val highlight-val" id="modalDonateAccNum">0906279876</strong>
-                      <button type="button" class="donate-copy-btn" id="btnModalCopyAcc" title="Sao chép số tài khoản" aria-label="Sao chép số tài khoản" data-i18n-title="dn_btn_copy_acc">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                        <span data-i18n="dn_btn_copy_acc">Sao chép</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="donate-info-item">
-                    <span class="donate-info-label" data-i18n="dn_msg_label">Nội dung chuyển khoản:</span>
-                    <div class="donate-copy-row">
-                      <strong class="donate-info-val" id="modalDonateMemo">ZCL Hub</strong>
-                      <button type="button" class="donate-copy-btn" id="btnModalCopyMemo" title="Sao chép nội dung" aria-label="Sao chép nội dung" data-i18n-title="dn_btn_copy_msg">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                        <span data-i18n="dn_btn_copy_msg">Sao chép</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="donate-info-item">
-                    <span class="donate-info-label">MoMo:</span>
-                    <div class="donate-copy-row">
-                      <strong class="donate-info-val">0906279876</strong>
-                      <button type="button" class="donate-copy-btn" id="btnModalCopyMomo" title="Sao chép số MoMo" aria-label="Sao chép số MoMo" data-i18n-title="dn_btn_copy_momo">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                        <span data-i18n="dn_btn_copy_momo">Sao chép</span>
-                      </button>
-                    </div>
-                  </div>
+          <div class="donate-qr-content-row modal-qr-row">
+            <div class="donate-qr-frame">
+              <div class="donate-qr-wrapper">
+                <img id="modalDonateQrImg" src="https://img.vietqr.io/image/MB-0906279876-compact2.png?amount=20000&addInfo=ZCL%20Hub" alt="VietQR MB Bank - ZCL Hub" class="donate-qr-img" loading="lazy">
+                <div class="donate-qr-corners">
+                  <span class="corner tl"></span>
+                  <span class="corner tr"></span>
+                  <span class="corner bl"></span>
+                  <span class="corner br"></span>
                 </div>
               </div>
+              <span class="donate-qr-scan-line" aria-hidden="true"></span>
+              <span class="donate-qr-caption">VietQR · MB Bank</span>
+            </div>
 
-              <div class="donate-confirm-box">
-                <button type="button" class="btn btn-donate-confirm" id="btnConfirmDonation">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  <span data-i18n="dn_btn_confirm">Tôi đã chuyển khoản · Xác nhận ủng hộ</span>
-                </button>
-                <span class="donate-confirm-hint" data-i18n="dn_confirm_hint">Bấm sau khi bạn đã hoàn tất quét mã QR hoặc chuyển khoản thành công</span>
+            <div class="donate-info-fields">
+              <div class="donate-info-item">
+                <span class="donate-info-label" data-i18n="dn_bank_label">Ngân hàng:</span>
+                <strong class="donate-info-val" data-i18n="dn_bank_val">MB Bank (Quân Đội)</strong>
+              </div>
+              <div class="donate-info-item">
+                <span class="donate-info-label" data-i18n="dn_acc_num_label">Số tài khoản:</span>
+                <div class="donate-copy-row">
+                  <strong class="donate-info-val highlight-val" id="modalDonateAccNum">0906279876</strong>
+                  <button type="button" class="donate-copy-btn" id="btnModalCopyAcc" title="Sao chép số tài khoản" aria-label="Sao chép số tài khoản" data-i18n-title="dn_btn_copy_acc">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span data-i18n="dn_btn_copy_acc">Sao chép số tài khoản</span>
+                  </button>
+                </div>
+              </div>
+              <div class="donate-info-item">
+                <span class="donate-info-label" data-i18n="dn_msg_label">Nội dung chuyển khoản:</span>
+                <div class="donate-copy-row">
+                  <strong class="donate-info-val" id="modalDonateMemo">ZCL Hub</strong>
+                  <button type="button" class="donate-copy-btn" id="btnModalCopyMemo" title="Sao chép nội dung" aria-label="Sao chép nội dung" data-i18n-title="dn_btn_copy_msg">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span data-i18n="dn_btn_copy_msg">Sao chép nội dung</span>
+                  </button>
+                </div>
               </div>
             </div>
+          </div>
+
+          <div class="donate-confirm-box">
+            <button type="button" class="btn btn-donate-confirm" id="btnConfirmDonation">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span data-i18n="dn_btn_confirm">Tôi đã chuyển khoản · Xác nhận ủng hộ</span>
+            </button>
+            <span class="donate-confirm-hint" data-i18n="dn_confirm_hint">Bấm sau khi bạn đã hoàn tất quét mã QR hoặc chuyển khoản thành công</span>
           </div>
         </div>
       </div>
@@ -1392,6 +1331,6 @@
     <div class="toast-progress-bar" id="toastProgressBar"></div>
   </div>
 
-  <script src="src/app.js?v=42"></script>
+  <script src="src/app.js?v=45"></script>
 </body>
 </html>
