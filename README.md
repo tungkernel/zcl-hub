@@ -10,9 +10,9 @@
 [![Mã nguồn mở GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 [![Zero-Dependency](https://img.shields.io/badge/dependencies-zero-brightgreen.svg)]()
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-purple.svg)]()
-[![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6.svg)]()
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-0078D6.svg)]()
 
-[Mở Trang Web](https://tungkernel.github.io/zcl-hub/) · [Dùng thử trên Web](https://tungkernel.github.io/zcl-hub/#studio) · [Tải về ứng dụng](https://tungkernel.github.io/zcl-hub/#download) · [Góp ý](https://tungkernel.github.io/zcl-hub/#feedback) · [Ủng hộ](https://tungkernel.github.io/zcl-hub/#donate)
+[Mở Trang Web](https://tungkernel.github.io/zcl-hub/) · [Ứng dụng & Tải về](https://tungkernel.github.io/zcl-hub/#apps) · [Hướng dẫn & Hỏi đáp](https://tungkernel.github.io/zcl-hub/#faq) · [Góp ý](https://tungkernel.github.io/zcl-hub/#feedback) · [Ủng hộ](https://tungkernel.github.io/zcl-hub/#donate)
 
 </div>
 
@@ -31,9 +31,9 @@
 
 | Ứng dụng | Chức năng | Giấy phép | Trạng thái | Tải về |
 | :--- | :--- | :--- | :--- | :--- |
-| **ZCL Teleport** | Gửi nhận file lớn và đồng bộ văn bản nhanh giữa 2 máy | Mã nguồn mở (`GPL-3.0`) | Chính thức v1.2.0 | [Tải về](https://tungkernel.github.io/zcl-hub/#download) |
-| **ZCL Remote** | Điều khiển máy tính từ xa siêu mượt qua Wi-Fi | Miễn phí (`Độc quyền`) | Thử nghiệm v0.2.0 | [Tải về](https://tungkernel.github.io/zcl-hub/#download) |
-| **ZCL Mind** | Trợ lý thấu hiểu cá nhân, thói quen & lịch trình chạy trên máy | Miễn phí (`Độc quyền`) | Đang phát triển | Sắp ra mắt |
+| **ZCL Teleport** | Gửi nhận file, thư mục lớn, đồng bộ khay nhớ tạm và gửi qua QR điện thoại | Mã nguồn mở (`GPL-3.0`) | Chính thức v1.8.0 (Windows · macOS · Linux) | [Tải về](https://tungkernel.github.io/zcl-hub/#apps/teleport) |
+| **ZCL Remote** | Điều khiển máy tính từ xa siêu mượt qua Wi-Fi | Miễn phí (`Độc quyền`) | Thử nghiệm v0.2.0 (Windows) | [Tải về](https://tungkernel.github.io/zcl-hub/#apps/remote) |
+| **ZCL Mind** | Trợ lý thấu hiểu cá nhân, thói quen & lịch trình chạy trên máy | Miễn phí (`Độc quyền`) | Đang phát triển | [Xem chi tiết](https://tungkernel.github.io/zcl-hub/#apps/mind) |
 
 ---
 
@@ -66,10 +66,10 @@ hub/
 │   ├── faq.md            # Hỏi đáp & xử lý sự cố
 │   └── roadmap.md        # Lộ trình phát triển
 ├── src/                  # Mã nguồn giao diện và xử lý
-│   ├── styles.css        # Giao diện Dark Modern Tech, tối ưu máy tính & điện thoại
-│   └── app.js            # Xử lý chuyển tab, song ngữ (VI/EN) & bản dùng thử trên Web
+│   ├── styles.css        # Giao diện Dark/Light/Eco Mode, tối ưu máy tính & điện thoại
+│   └── app.js            # Xử lý 3 tab, song ngữ (VI/EN), tải đa nền tảng & hộp thoại Góp ý/Ủng hộ
 ├── tests/                # Bộ kiểm thử tự động (test_ui.py, test-runner.html)
-├── index.html            # Trang chủ phân chia 5 tab trực quan, không dồn 1 trang
+├── index.html            # Trang chủ phân chia 3 tab gọn gàng (Tổng quan, Ứng dụng & Tải về, Hỏi đáp)
 ├── 404.html              # Trang 404 tùy chỉnh Dark Modern Tech cho GitHub Pages
 ├── manifest.json         # Cấu hình PWA để cài đặt ứng dụng vào máy
 ├── sw.js                 # Service Worker lưu trữ bộ nhớ đệm dùng offline

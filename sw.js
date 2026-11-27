@@ -1,5 +1,5 @@
-// ZCL Hub Service Worker - Offline Ready & Automatic Background Update
-const CACHE_NAME = 'zcl-hub-v40';
+// ZCL Hub Service Worker - Offline Ready & Background Refresh
+const CACHE_NAME = 'zcl-hub-v41';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -16,7 +16,15 @@ const ASSETS_TO_CACHE = [
   './assets/pwa/icon-192.png',
   './assets/pwa/icon-512.png',
   './assets/pwa/icon-maskable-512.png',
-  './assets/pwa/apple-touch-icon.png'
+  './assets/pwa/apple-touch-icon.png',
+  './assets/screenshots/tim-may-moi.png',
+  './assets/screenshots/hoi-nhan-file.png',
+  './assets/screenshots/web-qr-khach.png',
+  './assets/screenshots/tu-dong-hoa-cai-dat.png',
+  './assets/screenshots/en-device-discovery.png',
+  './assets/screenshots/en-receive-prompt.png',
+  './assets/screenshots/en-web-guest.png',
+  './assets/screenshots/en-transfer-settings.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -29,19 +37,12 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
-        })
-      )
+      Promise.all(keys.map((key) => (key !== CACHE_NAME ? caches.delete(key) : null)))
     )
   );
   self.clients.claim();
 });
 
-// Listen for messages from client UI to trigger immediate update or cache refresh
 self.addEventListener('message', (event) => {
   if (!event.data || !event.data.type) return;
 
@@ -68,46 +69,18 @@ self.addEventListener('message', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Pass non-GET requests (e.g. POST AJAX forms, GitHub API) directly to the network
-  if (event.request.method !== 'GET') {
-    return;
-  }
+  if (event.request.method !== 'GET') return;
 
   const reqUrl = new URL(event.request.url);
-  // Do not cache external API calls (such as api.github.com)
-  if (reqUrl.origin !== self.location.origin) {
-    return;
-  }
+  if (reqUrl.origin !== self.location.origin) return;
 
   event.respondWith(
     caches.open(CACHE_NAME).then((cache) =>
       cache.match(event.request).then((cachedResponse) => {
-        // Stale-While-Revalidate: fetch fresh version in background when online
         const networkFetch = fetch(event.request)
           .then((networkResponse) => {
             if (networkResponse && networkResponse.ok && networkResponse.status === 200) {
-              const prevEtag = cachedResponse ? cachedResponse.headers.get('etag') : null;
-              const nextEtag = networkResponse.headers.get('etag');
-              const prevMod = cachedResponse ? cachedResponse.headers.get('last-modified') : null;
-              const nextMod = networkResponse.headers.get('last-modified');
-
               cache.put(event.request, networkResponse.clone());
-
-              // Notify open tabs if a newer version of the file was detected on server
-              const hasChanged =
-                (prevEtag && nextEtag && prevEtag !== nextEtag) ||
-                (prevMod && nextMod && prevMod !== nextMod);
-
-              if (hasChanged) {
-                self.clients.matchAll({ type: 'window' }).then((clients) => {
-                  clients.forEach((client) => {
-                    client.postMessage({
-                      type: 'ZCL_SW_UPDATED',
-                      url: event.request.url
-                    });
-                  });
-                });
-              }
             }
             return networkResponse;
           })

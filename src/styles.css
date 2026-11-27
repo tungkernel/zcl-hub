@@ -11978,3 +11978,471 @@ section,
     font-size: 16px !important;
   }
 }
+
+
+/* ================================================================
+   V2.0 STREAMLINED 3-TAB LAYOUT & MULTI-PLATFORM DOWNLOAD STYLES
+   ================================================================ */
+
+.hero-clean {
+  padding-top: 72px;
+  padding-bottom: 56px;
+}
+
+.hero-platform-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(133, 237, 202, 0.08);
+  border: 1px solid rgba(133, 237, 202, 0.25);
+  color: var(--mint);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+[data-theme="light"] .hero-platform-pill {
+  background: rgba(11, 94, 71, 0.08);
+  border-color: rgba(11, 94, 71, 0.22);
+  color: #0B5E47;
+}
+
+/* Real Screenshot Hero Preview */
+.hero-preview-shell {
+  max-width: 920px;
+  margin: 40px auto 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] .hero-preview-shell {
+  box-shadow: 0 20px 50px rgba(42, 37, 30, 0.1);
+}
+
+.hero-preview-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  flex-wrap: wrap;
+}
+
+[data-theme="light"] .hero-preview-bar {
+  background: rgba(42, 37, 30, 0.03);
+}
+
+.preview-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.preview-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.preview-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.preview-tab-btn {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.preview-tab-btn:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.preview-tab-btn.active {
+  color: #09080c;
+  background: var(--mint);
+  font-weight: 600;
+}
+
+[data-theme="light"] .preview-tab-btn:hover {
+  background: rgba(42, 37, 30, 0.06);
+}
+
+[data-theme="light"] .preview-tab-btn.active {
+  color: #FFFFFF;
+  background: #0B5E47;
+}
+
+.hero-preview-stage {
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-theme="light"] .hero-preview-stage {
+  background: #F3ECE0;
+}
+
+.hero-preview-img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+}
+
+.hero-preview-caption {
+  margin: 0;
+  padding: 12px 20px 16px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+/* Overview 3 Product Cards */
+.overview-products-section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.overview-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 20px;
+}
+
+.overview-product-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.overview-product-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-bright);
+}
+
+.ov-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.overview-product-card h3 {
+  margin: 4px 0 0;
+  font-size: 1.25rem;
+}
+
+.ov-card-desc {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.ov-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.ov-card-actions {
+  margin-top: 4px;
+}
+
+/* Compact Support Bar on Overview */
+.overview-support-bar {
+  margin-top: 28px;
+  padding: 22px 26px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.support-bar-text {
+  max-width: 600px;
+}
+
+.support-bar-text h3 {
+  margin: 0 0 6px;
+  font-size: 1.08rem;
+}
+
+.support-bar-text p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.support-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Multi-Platform Download Matrix inside App Detail */
+.detail-download-matrix {
+  margin-top: 28px;
+  padding: 26px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.matrix-note {
+  margin: 6px 0 20px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.os-download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
+}
+
+.os-download-card {
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.os-download-card.mint {
+  border-color: rgba(133, 237, 202, 0.35);
+}
+
+[data-theme="light"] .os-download-card {
+  background: #FAF4EA;
+}
+
+[data-theme="light"] .os-download-card.mint {
+  border-color: rgba(11, 94, 71, 0.35);
+}
+
+.os-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.os-card-top h4 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.os-tag {
+  font-size: 0.74rem;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+}
+
+.os-tag.mint {
+  background: rgba(133, 237, 202, 0.14);
+  color: var(--mint);
+}
+
+[data-theme="light"] .os-tag {
+  background: rgba(42, 37, 30, 0.08);
+  color: #5C5347;
+}
+
+[data-theme="light"] .os-tag.mint {
+  background: rgba(11, 94, 71, 0.12);
+  color: #0B5E47;
+}
+
+.os-card-sub {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.os-alt-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  padding: 2px 0;
+  text-align: left;
+  color: var(--mint);
+  font-size: 0.84rem;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+[data-theme="light"] .link-btn {
+  color: #0B5E47;
+}
+
+.os-tip {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.matrix-footer-links {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+/* Real Screenshots Gallery */
+.detail-gallery-section {
+  margin-top: 32px;
+}
+
+.screenshot-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 18px;
+}
+
+.screenshot-card {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.screenshot-card figcaption {
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+/* Adaptive Donate Modal (GitHub Sponsors first in EN, VietQR first in VI) */
+.donate-channels-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.donate-sponsors-card {
+  order: 2;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: rgba(133, 237, 202, 0.08);
+  border: 1px solid rgba(133, 237, 202, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.donate-vietqr-block {
+  order: 1;
+}
+
+html[lang="en"] .donate-sponsors-card {
+  order: 1;
+}
+
+html[lang="en"] .donate-vietqr-block {
+  order: 2;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+[data-theme="light"] .donate-sponsors-card {
+  background: rgba(11, 94, 71, 0.07);
+  border-color: rgba(11, 94, 71, 0.25);
+}
+
+.sponsors-card-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--mint);
+  margin-bottom: 4px;
+}
+
+[data-theme="light"] .sponsors-card-badge {
+  color: #0B5E47;
+}
+
+.sponsors-card-copy h4 {
+  margin: 0 0 4px;
+  font-size: 1.02rem;
+}
+
+.sponsors-card-copy p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  max-width: 400px;
+}
+
+.vietqr-block-head {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  text-align: left;
+}
