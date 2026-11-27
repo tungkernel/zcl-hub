@@ -21,13 +21,9 @@ const i18n = {
     hero_pill: "Windows · macOS · Linux · 100% Mạng nội bộ",
     hero_title: '<span class="title-gradient">ZCL Hub</span>',
     hero_lede: "Gửi file hàng chục GB và điều khiển máy tính trực tiếp qua Wi-Fi chung. Không cần Internet, không cần tạo tài khoản.",
-    hero_btn_download: "Tải ZCL Teleport v1.8.0",
-    hero_btn_apps: "Xem tất cả ứng dụng",
+    hero_btn_apps: "Khám phá Ứng dụng & Tải về",
+    hero_btn_guide: "Hướng dẫn nhanh",
 
-    shot_tab_discovery: "Tự tìm máy",
-    shot_tab_receive: "Hỏi trước khi nhận",
-    shot_tab_qr: "Gửi qua QR điện thoại",
-    shot_tab_settings: "Tự đẩy thư mục",
     shot_cap_discovery: "Tự tìm các máy tính trong cùng mạng Wi-Fi, ghép đôi một lần bằng mã 6 số.",
     shot_cap_receive: "Luôn hỏi xác nhận trước khi nhận file hoặc thư mục từ máy khác.",
     shot_cap_qr: "Quét mã QR để gửi nhận ảnh và tệp với điện thoại không cần cài thêm ứng dụng.",
@@ -51,11 +47,6 @@ const i18n = {
     pil4_title: "Miễn phí, không quảng cáo",
     pil4_desc: "Không giới hạn dung lượng, không khóa tính năng, không quảng cáo và được duy trì độc lập cho cộng đồng.",
 
-    ov_support_title: "ZCL Hub hữu ích cho công việc hàng ngày của bạn?",
-    ov_support_desc: "Mọi công cụ đều miễn phí và không quảng cáo. Sự ủng hộ của bạn giúp duy trì dự án, kiểm thử đa nền tảng và hướng tới ký mã ứng dụng.",
-    ov_support_github: "Ủng hộ trên GitHub Sponsors",
-    ov_support_vietqr: "VietQR / Chuyển khoản VN",
-
     store_catalog_badge: "ỨNG DỤNG & TẢI VỀ",
     store_catalog_title: "Chọn ứng dụng để xem chi tiết hoặc tải ngay",
     store_catalog_sub: "Miễn phí hoàn toàn, không cần tài khoản. Các liên kết tải tự động đồng bộ bản phát hành mới nhất từ GitHub.",
@@ -74,15 +65,11 @@ const i18n = {
     tp_f1: "Nối lại tự động khi mất điện hoặc rớt Wi-Fi, không phải gửi lại từ đầu",
     tp_f2: "Chỉ gửi phần thay đổi, tự đẩy thư mục theo dõi và hỗ trợ dòng lệnh",
     tp_f3: "Hỗ trợ Windows, macOS, Linux và điện thoại qua mã QR trình duyệt",
-    store_btn_dl_teleport: "Tải Teleport",
-    store_btn_all_platforms: "Chi tiết & Tất cả nền tảng",
 
     rm_desc: "Điều khiển máy tính từ xa mượt mà qua Wi-Fi chung. Chuột bấm ăn ngay, không quảng cáo và không giới hạn thời gian.",
     rm_f1: "Màn hình rõ nét 60 FPS, tối ưu độ nét theo tốc độ Wi-Fi",
     rm_f2: "Di chuột và bấm phím phản hồi tức thì như ngồi trước máy thật",
     rm_f3: "Luôn hỏi xác nhận và có nút ngắt kết nối khẩn cấp một chạm",
-    store_btn_dl_remote: "Tải Remote (.exe)",
-    store_btn_view_detail: "Xem chi tiết",
 
     mind_desc: "Trợ lý cá nhân chạy 100% trên máy tính Windows, ghi nhớ thói quen, lịch trình và mối quan hệ hoàn toàn ngoại tuyến.",
     mind_f1: "Bản đồ thấu hiểu 6 chiều lưu cục bộ trên ổ đĩa của bạn",
@@ -104,8 +91,6 @@ const i18n = {
     dl_btn_linux_appimage: "Tải AppImage (72.7 MB)",
     os_tip_mac: "Mở lần đầu: chuột phải vào ứng dụng → chọn Mở (Open) và cho phép truy cập Mạng cục bộ.",
     os_tip_linux: "Cấp quyền chạy bằng <code>chmod +x</code> rồi chạy trực tiếp.",
-    dl_view_release_sha: "Xem trang phát hành & mã kiểm tra SHA256SUMS.txt trên GitHub",
-    dl_view_source: "Xem mã nguồn trên GitHub",
     dl_view_release: "Xem danh sách phát hành trên GitHub",
 
     dt_tp_gallery_title: "Giao diện thực tế",
@@ -309,13 +294,9 @@ const i18n = {
     hero_pill: "Windows · macOS · Linux · 100% Local Network",
     hero_title: '<span class="title-gradient">ZCL Hub</span>',
     hero_lede: "Transfer multi-gigabyte files and control your desktop directly over local Wi-Fi. No Internet, no cloud, no accounts.",
-    hero_btn_download: "Download ZCL Teleport v1.8.0",
-    hero_btn_apps: "Browse all apps",
+    hero_btn_apps: "Explore Apps & Downloads",
+    hero_btn_guide: "Quick Guide",
 
-    shot_tab_discovery: "Auto Discovery",
-    shot_tab_receive: "Confirm Receive",
-    shot_tab_qr: "Phone QR Guest",
-    shot_tab_settings: "Watch Folders",
     shot_cap_discovery: "Automatically discovers computers on the same Wi-Fi and pairs once with a 6-digit code.",
     shot_cap_receive: "Always asks for your confirmation before accepting incoming files or folders.",
     shot_cap_qr: "Scan a QR code to exchange photos and files with any phone browser — no app install needed.",
@@ -339,11 +320,6 @@ const i18n = {
     pil4_title: "Free, with no ads",
     pil4_desc: "No file size caps, no time limits, no paywalls, and independently maintained for the community.",
 
-    ov_support_title: "Finding ZCL Hub useful in your daily workflow?",
-    ov_support_desc: "Every tool is free with no ads. Voluntary sponsorship helps cover cross-platform testing, code signing, and ongoing maintenance.",
-    ov_support_github: "Sponsor on GitHub",
-    ov_support_vietqr: "VietQR / Vietnam transfer",
-
     store_catalog_badge: "APPS & DOWNLOADS",
     store_catalog_title: "Explore apps and download the latest release",
     store_catalog_sub: "Completely free, no account needed. Download links automatically track the latest GitHub releases.",
@@ -362,15 +338,11 @@ const i18n = {
     tp_f1: "Automatic resume across Wi-Fi drops, power loss, or restarts",
     tp_f2: "Smart delta transfer, auto-push watch folders, and built-in CLI",
     tp_f3: "Available for Windows, macOS, Linux, plus phone browser QR mode",
-    store_btn_dl_teleport: "Download Teleport",
-    store_btn_all_platforms: "Details & All Platforms",
 
     rm_desc: "Smooth remote desktop control over local Wi-Fi with instant cursor response, no ads, and no session time limits.",
     rm_f1: "Crisp 60 FPS display with adaptive quality for your Wi-Fi speed",
     rm_f2: "Instant mouse and keyboard response directly over your local network",
     rm_f3: "Requires permission before connecting, with a one-click stop button",
-    store_btn_dl_remote: "Download Remote (.exe)",
-    store_btn_view_detail: "View details",
 
     mind_desc: "Offline personal assistant running 100% on Windows CPU, keeping habits, schedules, and personal notes private.",
     mind_f1: "Six-dimension personal memory map stored strictly on your drive",
@@ -392,8 +364,6 @@ const i18n = {
     dl_btn_linux_appimage: "Download AppImage (72.7 MB)",
     os_tip_mac: "First launch: right-click the app → choose Open, and allow Local Network access.",
     os_tip_linux: "Make executable with <code>chmod +x</code> and run directly.",
-    dl_view_release_sha: "View GitHub release & SHA256SUMS.txt checksums",
-    dl_view_source: "View source code on GitHub",
     dl_view_release: "View all releases on GitHub",
 
     dt_tp_gallery_title: "Real interface screenshots",
@@ -1062,12 +1032,12 @@ function initDownloadModal() {
       tipEl.innerHTML = i18n[currentLang][tipKey];
     }
 
-    modal.classList.add('open');
+    modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
-    modal.classList.remove('open');
+    modal.classList.remove('active');
     document.body.style.overflow = '';
   }
 
@@ -1091,7 +1061,7 @@ function initDownloadModal() {
     if (e.target === modal) closeModal();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
   });
 }
 
@@ -1729,12 +1699,12 @@ function initUnifiedFeedbackDonateModal() {
 
   function openModal(initialTab = 'feedback') {
     setModalTab(initialTab);
-    modal.classList.add('open');
+    modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
-    modal.classList.remove('open');
+    modal.classList.remove('active');
     document.body.style.overflow = '';
   }
 
@@ -1749,15 +1719,14 @@ function initUnifiedFeedbackDonateModal() {
     if (e.target === modal) closeModal();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
   });
 
   const triggers = [
     ['btnHeaderFeedback', 'feedback'],
     ['footerLinkFeedback', 'feedback'],
     ['btnHeaderDonate', 'donate'],
-    ['footerLinkDonate', 'donate'],
-    ['btnOverviewOpenDonate', 'donate']
+    ['footerLinkDonate', 'donate']
   ];
 
   triggers.forEach(([id, tab]) => {
@@ -1779,12 +1748,12 @@ function initThankYouModal() {
   const btnFeedback = document.getElementById('btnThankYouLeaveMsg');
 
   function openThankYouModal() {
-    modal.classList.add('open');
+    modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeThankYouModal() {
-    modal.classList.remove('open');
+    modal.classList.remove('active');
     document.body.style.overflow = '';
   }
 
@@ -1810,7 +1779,7 @@ function initThankYouModal() {
     if (e.target === modal) closeThankYouModal();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('open')) closeThankYouModal();
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeThankYouModal();
   });
 }
 

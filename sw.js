@@ -1,5 +1,5 @@
 // ZCL Hub Service Worker - Offline Ready & Background Refresh
-const CACHE_NAME = 'zcl-hub-v41';
+const CACHE_NAME = 'zcl-hub-v42';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

@@ -10,7 +10,7 @@
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/pwa/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="src/styles.css?v=41">
+  <link rel="stylesheet" href="src/styles.css?v=42">
 
   <!-- Open Graph -->
   <meta property="og:title" content="ZCL Hub — Truyền file siêu tốc &amp; Điều khiển máy tính">
@@ -138,42 +138,14 @@
           </p>
 
           <div class="hero-cta">
-            <button class="btn btn-primary btn-open-download" id="heroPrimaryDownloadBtn" data-app="teleport" data-format="auto" type="button">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span id="heroPrimaryDownloadText" data-i18n="hero_btn_download">Tải ZCL Teleport v1.8.0</span>
-            </button>
-            <a href="#apps" class="btn btn-secondary" data-tab="tab-apps">
+            <a href="#apps" class="btn btn-primary" data-tab="tab-apps">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              <span data-i18n="hero_btn_apps">Xem tất cả ứng dụng</span>
+              <span data-i18n="hero_btn_apps">Khám phá Ứng dụng &amp; Tải về</span>
             </a>
-          </div>
-
-          <!-- Real Screenshot Preview Card -->
-          <div class="hero-preview-shell" id="heroPreviewShell">
-            <div class="hero-preview-bar">
-              <div class="preview-dots" aria-hidden="true">
-                <span class="dot-red"></span>
-                <span class="dot-yellow"></span>
-                <span class="dot-green"></span>
-              </div>
-              <div class="preview-tabs" role="tablist" aria-label="Xem trước giao diện ZCL Teleport">
-                <button type="button" class="preview-tab-btn active" data-shot="discovery" role="tab" aria-selected="true" data-i18n="shot_tab_discovery">Tự tìm máy</button>
-                <button type="button" class="preview-tab-btn" data-shot="receive" role="tab" aria-selected="false" data-i18n="shot_tab_receive">Hỏi trước khi nhận</button>
-                <button type="button" class="preview-tab-btn" data-shot="qr" role="tab" aria-selected="false" data-i18n="shot_tab_qr">Gửi qua QR điện thoại</button>
-                <button type="button" class="preview-tab-btn" data-shot="settings" role="tab" aria-selected="false" data-i18n="shot_tab_settings">Tự đẩy thư mục</button>
-              </div>
-            </div>
-            <div class="hero-preview-stage">
-              <img
-                id="heroPreviewImg"
-                src="assets/screenshots/tim-may-moi.png"
-                alt="ZCL Teleport interface preview"
-                class="hero-preview-img"
-              >
-            </div>
-            <p class="hero-preview-caption" id="heroPreviewCaption" data-i18n="shot_cap_discovery">
-              ZCL Teleport tự tìm các máy tính đang bật trong cùng mạng Wi-Fi, không cần gõ địa chỉ IP.
-            </p>
+            <a href="#faq" class="btn btn-secondary" data-tab="tab-faq">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span data-i18n="hero_btn_guide">Hướng dẫn nhanh</span>
+            </a>
           </div>
         </div>
       </section>
@@ -307,23 +279,6 @@
               <p data-i18n="pil4_desc">Không giới hạn dung lượng, không khóa tính năng, không quảng cáo và được duy trì độc lập cho cộng đồng.</p>
             </div>
           </div>
-
-          <!-- Compact Support Callout -->
-          <div class="overview-support-bar">
-            <div class="support-bar-text">
-              <h3 data-i18n="ov_support_title">ZCL Hub hữu ích cho công việc hàng ngày của bạn?</h3>
-              <p data-i18n="ov_support_desc">Mọi công cụ đều miễn phí và không quảng cáo. Sự ủng hộ của bạn giúp duy trì dự án, kiểm thử đa nền tảng và hướng tới ký mã ứng dụng.</p>
-            </div>
-            <div class="support-bar-actions">
-              <a href="https://github.com/sponsors/tungkernel" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                <span data-i18n="ov_support_github">Ủng hộ trên GitHub Sponsors</span>
-              </a>
-              <button type="button" class="btn btn-secondary btn-sm" id="btnOverviewOpenDonate">
-                <span data-i18n="ov_support_vietqr">VietQR / Chuyển khoản VN</span>
-              </button>
-            </div>
-          </div>
         </div>
       </section>
     </div>
@@ -375,12 +330,9 @@
               </div>
 
               <div class="card-actions store-actions">
-                <button class="btn btn-primary btn-sm btn-open-download" data-app="teleport" data-format="auto" type="button">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                  <span data-i18n="store_btn_dl_teleport">Tải Teleport</span>
-                </button>
-                <button class="btn btn-secondary btn-sm" data-action="open-detail" data-app-target="teleport" type="button">
-                  <span data-i18n="store_btn_all_platforms">Chi tiết &amp; Tất cả nền tảng</span>
+                <button class="btn btn-primary btn-sm" data-action="open-detail" data-app-target="teleport" type="button">
+                  <span data-i18n="ov_btn_view_download">Xem &amp; Tải về</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </div>
             </div>
@@ -418,12 +370,9 @@
               </div>
 
               <div class="card-actions store-actions">
-                <button class="btn btn-lilac btn-sm btn-open-download" data-app="remote" data-format="exe" type="button">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                  <span data-i18n="store_btn_dl_remote">Tải Remote (.exe)</span>
-                </button>
-                <button class="btn btn-secondary btn-sm" data-action="open-detail" data-app-target="remote" type="button">
-                  <span data-i18n="store_btn_view_detail">Xem chi tiết</span>
+                <button class="btn btn-lilac btn-sm" data-action="open-detail" data-app-target="remote" type="button">
+                  <span data-i18n="ov_btn_view_download">Xem &amp; Tải về</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </div>
             </div>
@@ -557,17 +506,6 @@
                 </button>
                 <p class="os-tip" data-i18n="os_tip_linux">Cấp quyền chạy bằng <code>chmod +x</code> rồi chạy trực tiếp.</p>
               </div>
-            </div>
-
-            <div class="matrix-footer-links">
-              <a href="https://github.com/Nha-Cong-Dong/zero-cloud-lan-teleport/releases/latest" target="_blank" rel="noopener noreferrer" class="modal-github-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                <span data-i18n="dl_view_release_sha">Xem trang phát hành &amp; mã kiểm tra SHA256SUMS.txt trên GitHub</span>
-              </a>
-              <a href="https://github.com/Nha-Cong-Dong/zero-cloud-lan-teleport" target="_blank" rel="noopener noreferrer" class="modal-github-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                <span data-i18n="dl_view_source">Xem mã nguồn trên GitHub</span>
-              </a>
             </div>
           </div>
 
@@ -1454,6 +1392,6 @@
     <div class="toast-progress-bar" id="toastProgressBar"></div>
   </div>
 
-  <script src="src/app.js?v=41"></script>
+  <script src="src/app.js?v=42"></script>
 </body>
 </html>

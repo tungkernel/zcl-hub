@@ -157,6 +157,8 @@ class TestTabArchitecture(unittest.TestCase):
         self.assertNotIn('id="btnInstallPwa"', self.html, "PWA install banner must be removed")
         self.assertNotIn('id="zclConsoleFrame"', self.html, "Fake cockpit console must be removed")
         self.assertNotIn('id="transferCalcSection"', self.html, "Transfer calculator must be removed")
+        self.assertNotIn('id="heroPreviewShell"', self.html, "Teleport-specific preview must not be on hub hero")
+        self.assertNotIn('class="overview-support-bar"', self.html, "Duplicate overview support bar must be removed")
 
     def test_tab_pills_and_indicator(self):
         for target in ('data-tab="tab-overview"', 'data-tab="tab-apps"', 'data-tab="tab-faq"'):
@@ -233,6 +235,8 @@ class TestComponentsIntegrity(unittest.TestCase):
         self.assertIn('id="donateSponsorsBlock"', self.html)
         self.assertIn('id="modalDonateQrImg"', self.html)
         self.assertIn('html[lang="en"] .donate-sponsors-card', self.css)
+        self.assertIn("modal.classList.add('active')", self.js)
+        self.assertNotIn("modal.classList.add('open')", self.js)
 
     def test_thank_you_modal_collective_voice(self):
         ty_start = self.html.find('id="donateThankYouModal"')
@@ -255,7 +259,7 @@ class TestPWAAndAssets(unittest.TestCase):
     def test_service_worker_asset_list(self):
         with open(SW_JS, "r", encoding="utf-8") as f:
             sw = f.read()
-        self.assertIn("zcl-hub-v41", sw)
+        self.assertIn("zcl-hub-v42", sw)
         for asset in (
             "./index.html",
             "./404.html",
