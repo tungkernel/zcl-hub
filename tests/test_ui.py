@@ -159,7 +159,9 @@ class TestTabArchitecture(unittest.TestCase):
         self.assertNotIn('id="transferCalcSection"', self.html, "Transfer calculator must be removed")
         self.assertNotIn('id="heroPreviewShell"', self.html, "Teleport-specific preview must not be on hub hero")
         self.assertNotIn('class="overview-support-bar"', self.html, "Duplicate overview support bar must be removed")
-        self.assertNotIn("github", self.html.lower(), "Website UI must not mention GitHub")
+        donate_start = self.html.find('id="modalPanelDonate"')
+        outside_donate_html = self.html[:donate_start] if donate_start != -1 else self.html
+        self.assertNotIn("github", outside_donate_html.lower(), "Website UI outside Donate modal must not mention GitHub")
         self.assertIn('class="story-card"', self.html)
         self.assertIn('class="scenarios-grid"', self.html)
 
@@ -235,6 +237,8 @@ class TestComponentsIntegrity(unittest.TestCase):
         self.assertLess(idx_feedback, idx_donate, "Feedback tab must appear before Donate tab")
         self.assertIn("https://formsubmit.co/ajax/hoangtungcnh@gmail.com", self.js)
         self.assertNotIn("MoMo:", self.html)
+        self.assertIn('id="donateSponsorsLink"', self.html)
+        self.assertIn("https://github.com/sponsors/tungkernel", self.html)
         self.assertIn('id="modalDonateQrImg"', self.html)
         self.assertIn("modal.classList.add('active')", self.js)
         self.assertNotIn("modal.classList.add('open')", self.js)
@@ -260,7 +264,7 @@ class TestPWAAndAssets(unittest.TestCase):
     def test_service_worker_asset_list(self):
         with open(SW_JS, "r", encoding="utf-8") as f:
             sw = f.read()
-        self.assertIn("zcl-hub-v45", sw)
+        self.assertIn("zcl-hub-v46", sw)
         for asset in (
             "./index.html",
             "./404.html",
